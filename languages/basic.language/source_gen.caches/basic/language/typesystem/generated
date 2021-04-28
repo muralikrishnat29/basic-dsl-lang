@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<product version="3" modelHash="-bstbx0rdb1esevut9w6xzvn7o3wwjnp">
+  <files names="TypesystemDescriptor.java:check_Workbook_NonTypesystemRule.java:typeof_DivExpression_InferenceRule.java:typeof_EqualsExpression_InferenceRule.java:typeof_MinusExpression_InferenceRule.java:typeof_MulExpression_InferenceRule.java:typeof_NumberLiteral_InferenceRule.java:typeof_PlusExpression_InferenceRule.java:typeof_StringLiteral_InferenceRule.java" />
+</product>
+
