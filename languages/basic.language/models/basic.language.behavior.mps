@@ -61,7 +61,7 @@
   </registry>
   <node concept="13h7C7" id="5P57ybUheb7">
     <property role="3GE5qa" value="expr.binary" />
-    <ref role="13h7C2" to="icqw:5P57ybUhbQP" resolve="BinaryExpression" />
+    <ref role="13h7C2" to="icqw:5P57ybUhbQP" resolve="BBinaryExpression" />
     <node concept="13i0hz" id="6eEbIT2TP1B" role="13h7CS">
       <property role="2Ki8OM" value="true" />
       <property role="13i0it" value="true" />
@@ -96,14 +96,14 @@
   </node>
   <node concept="13h7C7" id="5P57ybUhecd">
     <property role="3GE5qa" value="expr.binary" />
-    <ref role="13h7C2" to="icqw:5P57ybUh4eR" resolve="PlusExpression" />
+    <ref role="13h7C2" to="icqw:5P57ybUh4eR" resolve="BPlusExpression" />
     <node concept="13hLZK" id="5P57ybUhece" role="13h7CW">
       <node concept="3clFbS" id="5P57ybUhecf" role="2VODD2" />
     </node>
   </node>
   <node concept="13h7C7" id="5P57ybUhexn">
     <property role="3GE5qa" value="expr.binary" />
-    <ref role="13h7C2" to="icqw:5P57ybUh9Bm" resolve="MulExpression" />
+    <ref role="13h7C2" to="icqw:5P57ybUh9Bm" resolve="BMulExpression" />
     <node concept="13hLZK" id="5P57ybUhexo" role="13h7CW">
       <node concept="3clFbS" id="5P57ybUhexp" role="2VODD2" />
     </node>
@@ -124,7 +124,7 @@
   </node>
   <node concept="13h7C7" id="5P57ybUheEE">
     <property role="3GE5qa" value="expr.binary" />
-    <ref role="13h7C2" to="icqw:5P57ybUh7P7" resolve="MinusExpression" />
+    <ref role="13h7C2" to="icqw:5P57ybUh7P7" resolve="BMinusExpression" />
     <node concept="13hLZK" id="5P57ybUheEF" role="13h7CW">
       <node concept="3clFbS" id="5P57ybUheEG" role="2VODD2" />
     </node>

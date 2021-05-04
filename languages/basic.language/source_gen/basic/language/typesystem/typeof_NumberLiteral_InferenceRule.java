@@ -20,11 +20,11 @@ public class typeof_NumberLiteral_InferenceRule extends AbstractInferenceRule_Ru
     {
       SNode _nodeToCheck_1029348928467 = numberLiteral;
       EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:6dae767d-4ecf-4640-8c92-68f93fef7dff(basic.language.typesystem)", "7181604156655524378", 0, null);
-      typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:6dae767d-4ecf-4640-8c92-68f93fef7dff(basic.language.typesystem)", "7181604156655523158", true), (SNode) SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf940d22479L, "jetbrains.mps.baseLanguage.structure.IntegerType")), _info_12389875345);
+      typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:6dae767d-4ecf-4640-8c92-68f93fef7dff(basic.language.typesystem)", "7181604156655523158", true), (SNode) SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x63aa2eee42f488ebL, "basic.language.structure.BIntegerType")), _info_12389875345);
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.NumberLiteral$pe;
+    return CONCEPTS.BNumberLiteral$pe;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -34,6 +34,6 @@ public class typeof_NumberLiteral_InferenceRule extends AbstractInferenceRule_Ru
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept NumberLiteral$pe = MetaAdapterFactory.getConcept(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x5d451e22fa441083L, "basic.language.structure.NumberLiteral");
+    /*package*/ static final SConcept BNumberLiteral$pe = MetaAdapterFactory.getConcept(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x5d451e22fa441083L, "basic.language.structure.BNumberLiteral");
   }
 }

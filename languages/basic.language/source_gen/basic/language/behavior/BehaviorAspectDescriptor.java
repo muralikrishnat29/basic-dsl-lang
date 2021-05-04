@@ -12,10 +12,10 @@ import jetbrains.mps.lang.smodel.ConceptSwitchIndexBuilder;
 import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 
 public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor {
-  private final BHDescriptor myPlusExpression__BehaviorDescriptor = new PlusExpression__BehaviorDescriptor();
-  private final BHDescriptor myMinusExpression__BehaviorDescriptor = new MinusExpression__BehaviorDescriptor();
-  private final BHDescriptor myMulExpression__BehaviorDescriptor = new MulExpression__BehaviorDescriptor();
-  private final BHDescriptor myBinaryExpression__BehaviorDescriptor = new BinaryExpression__BehaviorDescriptor();
+  private final BHDescriptor myBPlusExpression__BehaviorDescriptor = new BPlusExpression__BehaviorDescriptor();
+  private final BHDescriptor myBMinusExpression__BehaviorDescriptor = new BMinusExpression__BehaviorDescriptor();
+  private final BHDescriptor myBMulExpression__BehaviorDescriptor = new BMulExpression__BehaviorDescriptor();
+  private final BHDescriptor myBBinaryExpression__BehaviorDescriptor = new BBinaryExpression__BehaviorDescriptor();
 
   public BehaviorAspectDescriptor() {
   }
@@ -25,13 +25,13 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
     SAbstractConcept cncpt = concept;
     switch (conceptIndex.index(cncpt)) {
       case 0:
-        return myBinaryExpression__BehaviorDescriptor;
+        return myBBinaryExpression__BehaviorDescriptor;
       case 1:
-        return myMinusExpression__BehaviorDescriptor;
+        return myBMinusExpression__BehaviorDescriptor;
       case 2:
-        return myMulExpression__BehaviorDescriptor;
+        return myBMulExpression__BehaviorDescriptor;
       case 3:
-        return myPlusExpression__BehaviorDescriptor;
+        return myBPlusExpression__BehaviorDescriptor;
       default:
     }
     return null;

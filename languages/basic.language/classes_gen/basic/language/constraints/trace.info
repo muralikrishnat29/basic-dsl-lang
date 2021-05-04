@@ -15,8 +15,8 @@
     </file>
   </root>
   <root nodeRef="r:7f045fd9-dfcb-49da-93e2-6cbcc0755104(basic.language.constraints)/7181604156654632638">
-    <file name="NumberLiteral_Constraints.java">
-      <node id="7181604156654632638" at="20,38,21,37" concept="8" />
+    <file name="BNumberLiteral_Constraints.java">
+      <node id="7181604156654632638" at="20,39,21,38" concept="8" />
       <node id="7181604156654632639" at="25,60,26,41" concept="8" />
       <node id="7181604156654632639" at="29,38,30,18" concept="5" />
       <node id="7181604156654632639" at="32,0,33,0" concept="6" trace="validatePropertyBreakingPoint" />
@@ -27,16 +27,16 @@
       <node id="7181604156654632638" at="46,84,47,119" concept="4" />
       <node id="7181604156654632639" at="47,119,48,63" concept="1" />
       <node id="7181604156654632638" at="48,63,49,22" concept="5" />
-      <node id="7181604156654632638" at="53,0,54,0" concept="6" trace="NumberLiteral$pe" />
+      <node id="7181604156654632638" at="53,0,54,0" concept="6" trace="BNumberLiteral$pe" />
       <node id="7181604156654632638" at="57,0,58,0" concept="6" trace="value$rowo" />
-      <node id="7181604156654632638" at="20,0,23,0" concept="0" trace="NumberLiteral_Constraints#()V" />
+      <node id="7181604156654632638" at="20,0,23,0" concept="0" trace="BNumberLiteral_Constraints#()V" />
       <node id="7181604156654632639" at="25,0,28,0" concept="0" trace="Value_Property#(Ljetbrains/mps/smodel/runtime/ConstraintsDescriptor;)V" />
       <node id="7181604156654632639" at="35,99,38,7" concept="2" />
       <node id="7181604156654632639" at="41,0,44,0" concept="7" trace="staticValidateProperty#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)Z" />
       <node id="7181604156654632639" at="28,0,32,0" concept="3" trace="hasOwnValidator#()Z" />
       <node id="7181604156654632638" at="45,0,51,0" concept="3" trace="getSpecifiedProperties#()Ljava/util/Map;" />
       <node id="7181604156654632639" at="33,0,41,0" concept="3" trace="validateValue#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/Object;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Z" />
-      <scope id="7181604156654632638" at="20,38,21,37" />
+      <scope id="7181604156654632638" at="20,39,21,38" />
       <scope id="7181604156654632639" at="25,60,26,41" />
       <scope id="7181604156654632639" at="29,38,30,18" />
       <scope id="7181604156654632639" at="36,53,37,75" />
@@ -62,10 +62,10 @@
         <var name="node" id="7181604156654632639" />
         <var name="propertyValue" id="7181604156654632639" />
       </scope>
-      <unit id="7181604156654632638" at="52,0,55,0" name="basic.language.constraints.NumberLiteral_Constraints$CONCEPTS" />
-      <unit id="7181604156654632638" at="56,0,59,0" name="basic.language.constraints.NumberLiteral_Constraints$PROPS" />
-      <unit id="7181604156654632639" at="24,0,45,0" name="basic.language.constraints.NumberLiteral_Constraints$Value_Property" />
-      <unit id="7181604156654632638" at="19,0,60,0" name="basic.language.constraints.NumberLiteral_Constraints" />
+      <unit id="7181604156654632638" at="52,0,55,0" name="basic.language.constraints.BNumberLiteral_Constraints$CONCEPTS" />
+      <unit id="7181604156654632638" at="56,0,59,0" name="basic.language.constraints.BNumberLiteral_Constraints$PROPS" />
+      <unit id="7181604156654632639" at="24,0,45,0" name="basic.language.constraints.BNumberLiteral_Constraints$Value_Property" />
+      <unit id="7181604156654632638" at="19,0,60,0" name="basic.language.constraints.BNumberLiteral_Constraints" />
     </file>
   </root>
 </debug-info>

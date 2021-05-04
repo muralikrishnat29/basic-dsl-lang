@@ -16,7 +16,7 @@
     </file>
   </root>
   <root nodeRef="r:3388e935-4911-4460-9053-f768549e3afd(basic.language.behavior)/6720811154496873159">
-    <file name="BinaryExpression__BehaviorDescriptor.java">
+    <file name="BBinaryExpression__BehaviorDescriptor.java">
       <node id="6720811154496873159" at="22,0,23,0" concept="6" trace="CONCEPT" />
       <node id="6720811154496873159" at="24,0,25,0" concept="6" trace="leftAssociative_id6eEbIT2TP1B" />
       <node id="6720811154496873159" at="25,0,26,0" concept="6" trace="priority_id6eEbIT2TPgl" />
@@ -35,7 +35,7 @@
       <node id="6720811154496873159" at="77,48,78,22" concept="5" />
       <node id="6720811154496873159" at="83,40,84,19" concept="5" />
       <node id="6720811154496873159" at="29,0,31,0" concept="7" trace="___init___#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
-      <node id="6720811154496873159" at="39,0,41,0" concept="0" trace="BinaryExpression__BehaviorDescriptor#()V" />
+      <node id="6720811154496873159" at="39,0,41,0" concept="0" trace="BBinaryExpression__BehaviorDescriptor#()V" />
       <node id="6720811154496873159" at="32,0,35,0" concept="7" trace="leftAssociative_id6eEbIT2TP1B#(Lorg/jetbrains/mps/openapi/language/SAbstractConcept;)Z" />
       <node id="6720811154496873159" at="35,0,38,0" concept="7" trace="priority_id6eEbIT2TPgl#(Lorg/jetbrains/mps/openapi/language/SAbstractConcept;)I" />
       <node id="6720811154496873159" at="49,49,52,5" concept="2" />
@@ -48,7 +48,7 @@
       <node id="6720811154496873159" at="47,0,58,0" concept="3" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
       <node id="6720811154496873159" at="59,0,74,0" concept="3" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
       <scope id="6720811154496873159" at="29,63,29,63" />
-      <scope id="6720811154496873159" at="39,54,39,54" />
+      <scope id="6720811154496873159" at="39,55,39,55" />
       <scope id="7181604156655226986" at="32,103,33,16" />
       <scope id="7181604156655227928" at="35,92,36,13" />
       <scope id="6720811154496873159" at="43,114,44,21" />
@@ -93,11 +93,11 @@
         <var name="method" id="6720811154496873159" />
         <var name="parameters" id="6720811154496873159" />
       </scope>
-      <unit id="6720811154496873159" at="21,0,87,0" name="basic.language.behavior.BinaryExpression__BehaviorDescriptor" />
+      <unit id="6720811154496873159" at="21,0,87,0" name="basic.language.behavior.BBinaryExpression__BehaviorDescriptor" />
     </file>
   </root>
   <root nodeRef="r:3388e935-4911-4460-9053-f768549e3afd(basic.language.behavior)/6720811154496873229">
-    <file name="PlusExpression__BehaviorDescriptor.java">
+    <file name="BPlusExpression__BehaviorDescriptor.java">
       <node id="6720811154496873229" at="18,0,19,0" concept="6" trace="CONCEPT" />
       <node id="6720811154496873229" at="21,0,22,0" concept="6" trace="BH_METHODS" />
       <node id="6720811154496873229" at="31,114,32,21" concept="1" />
@@ -110,7 +110,7 @@
       <node id="6720811154496873229" at="61,48,62,22" concept="5" />
       <node id="6720811154496873229" at="67,40,68,19" concept="5" />
       <node id="6720811154496873229" at="23,0,25,0" concept="7" trace="___init___#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
-      <node id="6720811154496873229" at="27,0,29,0" concept="0" trace="PlusExpression__BehaviorDescriptor#()V" />
+      <node id="6720811154496873229" at="27,0,29,0" concept="0" trace="BPlusExpression__BehaviorDescriptor#()V" />
       <node id="6720811154496873229" at="37,49,40,5" concept="2" />
       <node id="6720811154496873229" at="49,49,52,5" concept="2" />
       <node id="6720811154496873229" at="30,0,34,0" concept="3" trace="initNode#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SConstructor;[Ljava/lang/Object;)V" />
@@ -121,7 +121,7 @@
       <node id="6720811154496873229" at="35,0,46,0" concept="3" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
       <node id="6720811154496873229" at="47,0,58,0" concept="3" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
       <scope id="6720811154496873229" at="23,63,23,63" />
-      <scope id="6720811154496873229" at="27,52,27,52" />
+      <scope id="6720811154496873229" at="27,53,27,53" />
       <scope id="6720811154496873229" at="31,114,32,21" />
       <scope id="6720811154496873229" at="38,26,39,56" />
       <scope id="6720811154496873229" at="42,14,43,58" />
@@ -156,11 +156,11 @@
         <var name="method" id="6720811154496873229" />
         <var name="parameters" id="6720811154496873229" />
       </scope>
-      <unit id="6720811154496873229" at="17,0,71,0" name="basic.language.behavior.PlusExpression__BehaviorDescriptor" />
+      <unit id="6720811154496873229" at="17,0,71,0" name="basic.language.behavior.BPlusExpression__BehaviorDescriptor" />
     </file>
   </root>
   <root nodeRef="r:3388e935-4911-4460-9053-f768549e3afd(basic.language.behavior)/6720811154496874583">
-    <file name="MulExpression__BehaviorDescriptor.java">
+    <file name="BMulExpression__BehaviorDescriptor.java">
       <node id="6720811154496874583" at="22,0,23,0" concept="6" trace="CONCEPT" />
       <node id="6720811154496874583" at="24,0,25,0" concept="6" trace="priority_id6eEbIT2TPgl" />
       <node id="6720811154496874583" at="26,0,27,0" concept="6" trace="BH_METHODS" />
@@ -176,7 +176,7 @@
       <node id="6720811154496874583" at="71,48,72,22" concept="5" />
       <node id="6720811154496874583" at="77,40,78,19" concept="5" />
       <node id="6720811154496874583" at="28,0,30,0" concept="7" trace="___init___#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
-      <node id="6720811154496874583" at="35,0,37,0" concept="0" trace="MulExpression__BehaviorDescriptor#()V" />
+      <node id="6720811154496874583" at="35,0,37,0" concept="0" trace="BMulExpression__BehaviorDescriptor#()V" />
       <node id="6720811154496874583" at="31,0,34,0" concept="7" trace="priority_id6eEbIT2TPgl#(Lorg/jetbrains/mps/openapi/language/SAbstractConcept;)I" />
       <node id="6720811154496874583" at="45,49,48,5" concept="2" />
       <node id="6720811154496874583" at="57,49,60,5" concept="2" />
@@ -188,7 +188,7 @@
       <node id="6720811154496874583" at="43,0,54,0" concept="3" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
       <node id="6720811154496874583" at="55,0,68,0" concept="3" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
       <scope id="6720811154496874583" at="28,63,28,63" />
-      <scope id="6720811154496874583" at="35,51,35,51" />
+      <scope id="6720811154496874583" at="35,52,35,52" />
       <scope id="7181604156655343430" at="31,92,32,13" />
       <scope id="6720811154496874583" at="39,114,40,21" />
       <scope id="6720811154496874583" at="46,26,47,56" />
@@ -228,11 +228,11 @@
         <var name="method" id="6720811154496874583" />
         <var name="parameters" id="6720811154496874583" />
       </scope>
-      <unit id="6720811154496874583" at="21,0,81,0" name="basic.language.behavior.MulExpression__BehaviorDescriptor" />
+      <unit id="6720811154496874583" at="21,0,81,0" name="basic.language.behavior.BMulExpression__BehaviorDescriptor" />
     </file>
   </root>
   <root nodeRef="r:3388e935-4911-4460-9053-f768549e3afd(basic.language.behavior)/6720811154496875178">
-    <file name="MinusExpression__BehaviorDescriptor.java">
+    <file name="BMinusExpression__BehaviorDescriptor.java">
       <node id="6720811154496875178" at="18,0,19,0" concept="6" trace="CONCEPT" />
       <node id="6720811154496875178" at="21,0,22,0" concept="6" trace="BH_METHODS" />
       <node id="6720811154496875178" at="31,114,32,21" concept="1" />
@@ -245,7 +245,7 @@
       <node id="6720811154496875178" at="61,48,62,22" concept="5" />
       <node id="6720811154496875178" at="67,40,68,19" concept="5" />
       <node id="6720811154496875178" at="23,0,25,0" concept="7" trace="___init___#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
-      <node id="6720811154496875178" at="27,0,29,0" concept="0" trace="MinusExpression__BehaviorDescriptor#()V" />
+      <node id="6720811154496875178" at="27,0,29,0" concept="0" trace="BMinusExpression__BehaviorDescriptor#()V" />
       <node id="6720811154496875178" at="37,49,40,5" concept="2" />
       <node id="6720811154496875178" at="49,49,52,5" concept="2" />
       <node id="6720811154496875178" at="30,0,34,0" concept="3" trace="initNode#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SConstructor;[Ljava/lang/Object;)V" />
@@ -256,7 +256,7 @@
       <node id="6720811154496875178" at="35,0,46,0" concept="3" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
       <node id="6720811154496875178" at="47,0,58,0" concept="3" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
       <scope id="6720811154496875178" at="23,63,23,63" />
-      <scope id="6720811154496875178" at="27,53,27,53" />
+      <scope id="6720811154496875178" at="27,54,27,54" />
       <scope id="6720811154496875178" at="31,114,32,21" />
       <scope id="6720811154496875178" at="38,26,39,56" />
       <scope id="6720811154496875178" at="42,14,43,58" />
@@ -291,7 +291,7 @@
         <var name="method" id="6720811154496875178" />
         <var name="parameters" id="6720811154496875178" />
       </scope>
-      <unit id="6720811154496875178" at="17,0,71,0" name="basic.language.behavior.MinusExpression__BehaviorDescriptor" />
+      <unit id="6720811154496875178" at="17,0,71,0" name="basic.language.behavior.BMinusExpression__BehaviorDescriptor" />
     </file>
   </root>
 </debug-info>

@@ -28,7 +28,7 @@ public class check_Workbook_NonTypesystemRule extends AbstractNonTypesystemRule_
   }
   public void applyRule(final SNode workbook, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     Set<String> varNames = SetSequence.fromSet(new HashSet<String>());
-    for (SNode variable : Sequence.fromIterable(SNodeOperations.ofConcept(SLinkOperations.getChildren(workbook, LINKS.content$Ydej), CONCEPTS.Variable$B1))) {
+    for (SNode variable : Sequence.fromIterable(SNodeOperations.ofConcept(SLinkOperations.getChildren(workbook, LINKS.content$Ydej), CONCEPTS.BVariable$B1))) {
       if (SetSequence.fromSet(varNames).contains(SPropertyOperations.getString(variable, PROPS.name$MnvL))) {
         {
           final MessageTarget errorTarget = new NodeMessageTarget();
@@ -39,7 +39,7 @@ public class check_Workbook_NonTypesystemRule extends AbstractNonTypesystemRule_
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.Workbook$vo;
+    return CONCEPTS.BWorkbook$vo;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -57,7 +57,7 @@ public class check_Workbook_NonTypesystemRule extends AbstractNonTypesystemRule_
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept Variable$B1 = MetaAdapterFactory.getConcept(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x5d451e22fa43875dL, "basic.language.structure.Variable");
-    /*package*/ static final SConcept Workbook$vo = MetaAdapterFactory.getConcept(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x5d451e22fa438438L, "basic.language.structure.Workbook");
+    /*package*/ static final SConcept BVariable$B1 = MetaAdapterFactory.getConcept(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x5d451e22fa43875dL, "basic.language.structure.BVariable");
+    /*package*/ static final SConcept BWorkbook$vo = MetaAdapterFactory.getConcept(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x5d451e22fa438438L, "basic.language.structure.BWorkbook");
   }
 }

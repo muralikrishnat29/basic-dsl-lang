@@ -43,6 +43,13 @@ import jetbrains.mps.smodel.presentation.NodePresentationUtil;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.editor.runtime.selection.SelectionUtil;
 import com.mbeddr.mpsutil.grammarcells.runtime.SavedCaretPosition;
+import jetbrains.mps.baseLanguage.tuples.runtime.Tuples;
+import jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes;
+import jetbrains.mps.baseLanguage.tuples.runtime.MultiTuple;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.AttributeOperations;
+import java.util.Objects;
+import com.mbeddr.mpsutil.grammarcells.runtime.StringOrSequenceQuery;
+import com.mbeddr.mpsutil.grammarcells.runtime.EditorHierachyCache;
 import jetbrains.mps.openapi.editor.cells.SubstituteAction;
 import jetbrains.mps.smodel.IOperationContext;
 import jetbrains.mps.smodel.action.NodeSubstituteActionsFactoryContext;
@@ -55,7 +62,7 @@ import com.mbeddr.mpsutil.grammarcells.runtime.AbstractRule;
 import com.mbeddr.mpsutil.grammarcells.runtime.ISymbol;
 import com.mbeddr.mpsutil.grammarcells.runtime.ChildSymbol;
 import com.mbeddr.mpsutil.grammarcells.runtime.ConstantSymbol;
-import basic.language.behavior.BinaryExpression__BehaviorDescriptor;
+import basic.language.behavior.BBinaryExpression__BehaviorDescriptor;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
 public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor implements IGrammarActionsDescriptor {
@@ -73,12 +80,12 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
         public Iterable<SubstituteMenuItem> query() {
           List<SubstituteMenuItem> result = ListSequence.fromList(new ArrayList<SubstituteMenuItem>());
           _context.getEditorMenuTrace().pushTraceInfo();
-          _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "NumberLiteral", new SNodePointer("r:1d122455-559e-46f5-818b-26fce0a8c821(basic.language.editor)", "7181604156655058646")));
+          _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "BNumberLiteral", new SNodePointer("r:1d122455-559e-46f5-818b-26fce0a8c821(basic.language.editor)", "7181604156655058646")));
           try {
-            if (SConceptOperations.isExactly(SNodeOperations.asSConcept(expectedOutputConceptExactly), CONCEPTS.NumberLiteral$pe)) {
+            if (SConceptOperations.isExactly(SNodeOperations.asSConcept(expectedOutputConceptExactly), CONCEPTS.BNumberLiteral$pe)) {
               final SAbstractConcept expectedOutputConcept = GrammarCellsUtil.getExpectedOutputConcept(_context, expectedOutputConceptExactly);
 
-              for (SConcept subconcept : ListSequence.fromList(GrammarCellsUtil.getVisibleSubconceptsNonAbstract(CONCEPTS.NumberLiteral$pe, _context.getModel(), NumberLiteral_Editor.class, _context.getEditorContext()))) {
+              for (SConcept subconcept : ListSequence.fromList(GrammarCellsUtil.getVisibleSubconceptsNonAbstract(CONCEPTS.BNumberLiteral$pe, _context.getModel(), BNumberLiteral_Editor.class, _context.getEditorContext()))) {
                 final SConcept outputConcept = ((SConcept) subconcept);
 
                 if (SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(outputConcept), SNodeOperations.asSConcept(expectedOutputConcept))) {
@@ -118,7 +125,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
 
                       @Override
                       public SAbstractConcept getOutputConcept() {
-                        return CONCEPTS.NumberLiteral$pe;
+                        return CONCEPTS.BNumberLiteral$pe;
                       }
                     });
                   }
@@ -140,11 +147,11 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
         public Iterable<SubstituteMenuItem> query() {
           List<SubstituteMenuItem> result = ListSequence.fromList(new ArrayList<SubstituteMenuItem>());
           _context.getEditorMenuTrace().pushTraceInfo();
-          _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "ExpressionStatement", new SNodePointer("r:1d122455-559e-46f5-818b-26fce0a8c821(basic.language.editor)", "7181604156655001868")));
+          _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "BExpressionStatement", new SNodePointer("r:1d122455-559e-46f5-818b-26fce0a8c821(basic.language.editor)", "7181604156655001868")));
           try {
-            if (SConceptOperations.isExactly(SNodeOperations.asSConcept(expectedOutputConceptExactly), CONCEPTS.ExpressionStatement$A)) {
-              final SAbstractConcept wrappedConcept = CONCEPTS.Expression$2v;
-              for (SConcept subconcept : ListSequence.fromList(GrammarCellsUtil.getVisibleSubconceptsNonAbstract(CONCEPTS.ExpressionStatement$A, _context.getModel(), ExpressionStatement_Editor.class, _context.getEditorContext()))) {
+            if (SConceptOperations.isExactly(SNodeOperations.asSConcept(expectedOutputConceptExactly), CONCEPTS.BExpressionStatement$A)) {
+              final SAbstractConcept wrappedConcept = CONCEPTS.BExpression$2v;
+              for (SConcept subconcept : ListSequence.fromList(GrammarCellsUtil.getVisibleSubconceptsNonAbstract(CONCEPTS.BExpressionStatement$A, _context.getModel(), BExpressionStatement_Editor.class, _context.getEditorContext()))) {
                 final SConcept outputConcept = ((SConcept) subconcept);
 
                 final SAbstractConcept expectedOutputConcept = GrammarCellsUtil.getExpectedOutputConcept(_context, expectedOutputConceptExactly);
@@ -179,7 +186,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
                             wrappedNode = nodeToWrap;
                             // use setupNode after setting wrapped element to allow access to the wrapped element in node factories 
                             SNode wrapper = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(outputConcept));
-                            SLinkOperations.setTarget(wrapper, LINKS.expr$Jh7H, SNodeOperations.cast(nodeToWrap, CONCEPTS.Expression$2v));
+                            SLinkOperations.setTarget(wrapper, LINKS.expr$Jh7H, SNodeOperations.cast(nodeToWrap, CONCEPTS.BExpression$2v));
                             NodeFactoryManager.setupNode(outputConcept, wrapper, _context.getCurrentTargetNode(), _context.getParentNode(), _context.getModel());
 
                             return wrapper;
@@ -218,11 +225,11 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
         public Iterable<SubstituteMenuItem> query() {
           List<SubstituteMenuItem> result = ListSequence.fromList(new ArrayList<SubstituteMenuItem>());
           _context.getEditorMenuTrace().pushTraceInfo();
-          _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "BinaryExpression", new SNodePointer("r:1d122455-559e-46f5-818b-26fce0a8c821(basic.language.editor)", "7181604156655115113")));
+          _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "BBinaryExpression", new SNodePointer("r:1d122455-559e-46f5-818b-26fce0a8c821(basic.language.editor)", "7181604156655115113")));
           try {
-            if (SConceptOperations.isExactly(SNodeOperations.asSConcept(expectedOutputConceptExactly), CONCEPTS.BinaryExpression$QV)) {
-              final SAbstractConcept wrappedConcept = CONCEPTS.Expression$2v;
-              for (SConcept subconcept : ListSequence.fromList(GrammarCellsUtil.getVisibleSubconceptsNonAbstract(CONCEPTS.BinaryExpression$QV, _context.getModel(), BinaryExpression_Editor.class, _context.getEditorContext()))) {
+            if (SConceptOperations.isExactly(SNodeOperations.asSConcept(expectedOutputConceptExactly), CONCEPTS.BBinaryExpression$QV)) {
+              final SAbstractConcept wrappedConcept = CONCEPTS.BExpression$2v;
+              for (SConcept subconcept : ListSequence.fromList(GrammarCellsUtil.getVisibleSubconceptsNonAbstract(CONCEPTS.BBinaryExpression$QV, _context.getModel(), BBinaryExpression_Editor.class, _context.getEditorContext()))) {
                 final SConcept outputConcept = ((SConcept) subconcept);
 
                 final SAbstractConcept expectedOutputConcept = GrammarCellsUtil.getExpectedOutputConcept(_context, expectedOutputConceptExactly);
@@ -257,7 +264,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
                             wrappedNode = nodeToWrap;
                             // use setupNode after setting wrapped element to allow access to the wrapped element in node factories 
                             SNode wrapper = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(outputConcept));
-                            SLinkOperations.setTarget(wrapper, LINKS.left$4cid, SNodeOperations.cast(nodeToWrap, CONCEPTS.Expression$2v));
+                            SLinkOperations.setTarget(wrapper, LINKS.left$4cid, SNodeOperations.cast(nodeToWrap, CONCEPTS.BExpression$2v));
                             NodeFactoryManager.setupNode(outputConcept, wrapper, _context.getCurrentTargetNode(), _context.getParentNode(), _context.getModel());
 
                             return wrapper;
@@ -296,11 +303,11 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
         public Iterable<SubstituteMenuItem> query() {
           List<SubstituteMenuItem> result = ListSequence.fromList(new ArrayList<SubstituteMenuItem>());
           _context.getEditorMenuTrace().pushTraceInfo();
-          _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "BinaryExpression", new SNodePointer("r:1d122455-559e-46f5-818b-26fce0a8c821(basic.language.editor)", "7181604156655115129")));
+          _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "BBinaryExpression", new SNodePointer("r:1d122455-559e-46f5-818b-26fce0a8c821(basic.language.editor)", "7181604156655115129")));
           try {
-            if (SConceptOperations.isExactly(SNodeOperations.asSConcept(expectedOutputConceptExactly), CONCEPTS.BinaryExpression$QV)) {
-              final SAbstractConcept wrappedConcept = CONCEPTS.Expression$2v;
-              for (SConcept subconcept : ListSequence.fromList(GrammarCellsUtil.getVisibleSubconceptsNonAbstract(CONCEPTS.BinaryExpression$QV, _context.getModel(), BinaryExpression_Editor.class, _context.getEditorContext()))) {
+            if (SConceptOperations.isExactly(SNodeOperations.asSConcept(expectedOutputConceptExactly), CONCEPTS.BBinaryExpression$QV)) {
+              final SAbstractConcept wrappedConcept = CONCEPTS.BExpression$2v;
+              for (SConcept subconcept : ListSequence.fromList(GrammarCellsUtil.getVisibleSubconceptsNonAbstract(CONCEPTS.BBinaryExpression$QV, _context.getModel(), BBinaryExpression_Editor.class, _context.getEditorContext()))) {
                 final SConcept outputConcept = ((SConcept) subconcept);
 
                 final SAbstractConcept expectedOutputConcept = GrammarCellsUtil.getExpectedOutputConcept(_context, expectedOutputConceptExactly);
@@ -335,7 +342,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
                             wrappedNode = nodeToWrap;
                             // use setupNode after setting wrapped element to allow access to the wrapped element in node factories 
                             SNode wrapper = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(outputConcept));
-                            SLinkOperations.setTarget(wrapper, LINKS.right$4cKf, SNodeOperations.cast(nodeToWrap, CONCEPTS.Expression$2v));
+                            SLinkOperations.setTarget(wrapper, LINKS.right$4cKf, SNodeOperations.cast(nodeToWrap, CONCEPTS.BExpression$2v));
                             NodeFactoryManager.setupNode(outputConcept, wrapper, _context.getCurrentTargetNode(), _context.getParentNode(), _context.getModel());
 
                             return wrapper;
@@ -397,7 +404,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
             public Iterable<TransformationMenuItem> query(final TransformationMenuContext _context) {
               List<TransformationMenuItem> result = ListSequence.fromList(new ArrayList<TransformationMenuItem>());
               _context.getEditorMenuTrace().pushTraceInfo();
-              _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "NumberLiteral", new SNodePointer("r:1d122455-559e-46f5-818b-26fce0a8c821(basic.language.editor)", "7181604156655058646")));
+              _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "BNumberLiteral", new SNodePointer("r:1d122455-559e-46f5-818b-26fce0a8c821(basic.language.editor)", "7181604156655058646")));
               try {
               } finally {
                 _context.getEditorMenuTrace().popTraceInfo();
@@ -420,7 +427,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
             public Iterable<TransformationMenuItem> query(final TransformationMenuContext _context) {
               List<TransformationMenuItem> result = ListSequence.fromList(new ArrayList<TransformationMenuItem>());
               _context.getEditorMenuTrace().pushTraceInfo();
-              _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "ExpressionStatement", new SNodePointer("r:1d122455-559e-46f5-818b-26fce0a8c821(basic.language.editor)", "7181604156655001868")));
+              _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "BExpressionStatement", new SNodePointer("r:1d122455-559e-46f5-818b-26fce0a8c821(basic.language.editor)", "7181604156655001868")));
               try {
               } finally {
                 _context.getEditorMenuTrace().popTraceInfo();
@@ -443,16 +450,16 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
             public Iterable<TransformationMenuItem> query(final TransformationMenuContext _context) {
               List<TransformationMenuItem> result = ListSequence.fromList(new ArrayList<TransformationMenuItem>());
               _context.getEditorMenuTrace().pushTraceInfo();
-              _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "BinaryExpression", new SNodePointer("r:1d122455-559e-46f5-818b-26fce0a8c821(basic.language.editor)", "7181604156655115113")));
+              _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "BBinaryExpression", new SNodePointer("r:1d122455-559e-46f5-818b-26fce0a8c821(basic.language.editor)", "7181604156655115113")));
               try {
                 if (_context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM) {
-                  final SNode sourceNode = new Parser(_context.getModel()).isEndOf(_context.getNode(), _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM, CONCEPTS.Expression$2v, null);
+                  final SNode sourceNode = new Parser(_context.getModel()).isEndOf(_context.getNode(), _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM, CONCEPTS.BExpression$2v, null);
 
                   if (sourceNode != null) {
                     final SAbstractConcept sourceNodeConcept = SNodeOperations.getConcept(sourceNode);
                     SContainmentLink link = sourceNode.getContainmentLink();
                     SAbstractConcept expectedConcept = (link == null ? null : link.getTargetConcept());
-                    for (final SAbstractConcept subconcept : GrammarCellsUtil.getVisibleSubconceptsNonAbstract(CONCEPTS.BinaryExpression$QV, _context.getModel(), BinaryExpression_Editor.class, _context.getEditorContext())) {
+                    for (final SAbstractConcept subconcept : GrammarCellsUtil.getVisibleSubconceptsNonAbstract(CONCEPTS.BBinaryExpression$QV, _context.getModel(), BBinaryExpression_Editor.class, _context.getEditorContext())) {
                       boolean wrapperAllowed = expectedConcept == null || SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(subconcept), SNodeOperations.asSConcept(expectedConcept));
                       if (wrapperAllowed) {
                         final Iterable<String> matchingText = Sequence.fromIterable(Sequence.<String>singleton(new Object() {
@@ -480,9 +487,9 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
                               }
                               protected SNode doSubstitute(@Nullable EditorContext editorContext, String pattern) {
                                 String matchingText = getMatchingText(pattern);
-                                SNode wrapper = SNodeOperations.cast(SNodeFactoryOperations.createNewNode(subconcept, null), CONCEPTS.BinaryExpression$QV);
+                                SNode wrapper = SNodeOperations.cast(SNodeFactoryOperations.createNewNode(subconcept, null), CONCEPTS.BBinaryExpression$QV);
                                 SNodeOperations.replaceWithAnother(sourceNode, wrapper);
-                                SLinkOperations.setTarget(wrapper, LINKS.left$4cid, SNodeOperations.cast(sourceNode, CONCEPTS.Expression$2v));
+                                SLinkOperations.setTarget(wrapper, LINKS.left$4cid, SNodeOperations.cast(sourceNode, CONCEPTS.BExpression$2v));
 
 
                                 SNode newChild = ListSequence.fromList(SNodeOperations.getChildren(wrapper)).findFirst(new IWhereFilter<SNode>() {
@@ -539,16 +546,16 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
             public Iterable<TransformationMenuItem> query(final TransformationMenuContext _context) {
               List<TransformationMenuItem> result = ListSequence.fromList(new ArrayList<TransformationMenuItem>());
               _context.getEditorMenuTrace().pushTraceInfo();
-              _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "BinaryExpression", new SNodePointer("r:1d122455-559e-46f5-818b-26fce0a8c821(basic.language.editor)", "7181604156655115129")));
+              _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "BBinaryExpression", new SNodePointer("r:1d122455-559e-46f5-818b-26fce0a8c821(basic.language.editor)", "7181604156655115129")));
               try {
                 if (_context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM) {
-                  final SNode sourceNode = new Parser(_context.getModel()).isEndOf(_context.getNode(), _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM, CONCEPTS.Expression$2v, null);
+                  final SNode sourceNode = new Parser(_context.getModel()).isEndOf(_context.getNode(), _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM, CONCEPTS.BExpression$2v, null);
 
                   if (sourceNode != null) {
                     final SAbstractConcept sourceNodeConcept = SNodeOperations.getConcept(sourceNode);
                     SContainmentLink link = sourceNode.getContainmentLink();
                     SAbstractConcept expectedConcept = (link == null ? null : link.getTargetConcept());
-                    for (final SAbstractConcept subconcept : GrammarCellsUtil.getVisibleSubconceptsNonAbstract(CONCEPTS.BinaryExpression$QV, _context.getModel(), BinaryExpression_Editor.class, _context.getEditorContext())) {
+                    for (final SAbstractConcept subconcept : GrammarCellsUtil.getVisibleSubconceptsNonAbstract(CONCEPTS.BBinaryExpression$QV, _context.getModel(), BBinaryExpression_Editor.class, _context.getEditorContext())) {
                       boolean wrapperAllowed = expectedConcept == null || SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(subconcept), SNodeOperations.asSConcept(expectedConcept));
                       if (wrapperAllowed) {
                         final Iterable<String> matchingText = Sequence.fromIterable(Sequence.<String>singleton(new Object() {
@@ -576,9 +583,9 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
                               }
                               protected SNode doSubstitute(@Nullable EditorContext editorContext, String pattern) {
                                 String matchingText = getMatchingText(pattern);
-                                SNode wrapper = SNodeOperations.cast(SNodeFactoryOperations.createNewNode(subconcept, null), CONCEPTS.BinaryExpression$QV);
+                                SNode wrapper = SNodeOperations.cast(SNodeFactoryOperations.createNewNode(subconcept, null), CONCEPTS.BBinaryExpression$QV);
                                 SNodeOperations.replaceWithAnother(sourceNode, wrapper);
-                                SLinkOperations.setTarget(wrapper, LINKS.right$4cKf, SNodeOperations.cast(sourceNode, CONCEPTS.Expression$2v));
+                                SLinkOperations.setTarget(wrapper, LINKS.right$4cKf, SNodeOperations.cast(sourceNode, CONCEPTS.BExpression$2v));
 
 
                                 SNode newChild = ListSequence.fromList(SNodeOperations.getChildren(wrapper)).findFirst(new IWhereFilter<SNode>() {
@@ -625,6 +632,163 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
             }
           }.query(_context)));
         }
+      }
+      {
+        final EditorContext editorContext = _context.getEditorContext();
+        List<Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>> redirectedBefore = ListSequence.fromList(new ArrayList<Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>>());
+        ListSequence.fromList(redirectedBefore).addElement(MultiTuple.<TransformationMenuContext,_FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>from((SNodeOperations.isInstanceOf(((SNode) _context.getNode()), CONCEPTS.BVariable$B1) ? _context : null), new _FunctionTypes._return_P1_E0<Boolean, TransformationMenuContext>() {
+          public Boolean invoke(TransformationMenuContext parentContext) {
+            final SNode sourceNode = parentContext.getNode();
+            return true;
+          }
+        }));
+        ListSequence.fromList(redirectedBefore).addElement(MultiTuple.<TransformationMenuContext,_FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>from((SNodeOperations.isInstanceOf(((SNode) _context.getNode()), CONCEPTS.BVariable$B1) ? _context : null), new _FunctionTypes._return_P1_E0<Boolean, TransformationMenuContext>() {
+          public Boolean invoke(TransformationMenuContext parentContext) {
+            final SNode sourceNode = parentContext.getNode();
+            return true;
+          }
+        }));
+
+        List<Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>> redirectedAfter = ListSequence.fromList(new ArrayList<Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>>());
+        ListSequence.fromList(redirectedAfter).addElement(MultiTuple.<TransformationMenuContext,_FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>from((SNodeOperations.isInstanceOf(((SNode) _context.getNode()), CONCEPTS.BVariable$B1) ? _context : null), new _FunctionTypes._return_P1_E0<Boolean, TransformationMenuContext>() {
+          public Boolean invoke(TransformationMenuContext parentContext) {
+            final SNode sourceNode = parentContext.getNode();
+            return new Object() {
+              public boolean renderingCondition(SNode node) {
+                return Sequence.fromIterable(AttributeOperations.getChildNodesAndAttributes(node, LINKS.type$fL2x)).isNotEmpty();
+              }
+            }.renderingCondition(sourceNode);
+          }
+        }));
+        ListSequence.fromList(redirectedAfter).addElement(MultiTuple.<TransformationMenuContext,_FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>from(new Object() {
+          public TransformationMenuContext redirect() {
+            // redirect to type 
+            final SNode sourceNode = _context.getNode();
+
+            // Use the grammar rules for a deep search 
+            SNode parentNode = new Parser(_context.getModel()).isEndOf(sourceNode, _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM, CONCEPTS.BVariable$B1, LINKS.type$fL2x);
+            if (parentNode != null) {
+              return _context.withNode(parentNode);
+            }
+
+            // There might be no grammar for some concepts. Try a single level check. 
+            if (SNodeOperations.isInstanceOf(sourceNode, CONCEPTS.BType$sW) && SNodeOperations.isInstanceOf(SNodeOperations.getParent(sourceNode), CONCEPTS.BVariable$B1) && Objects.equals(sourceNode.getContainmentLink(), LINKS.type$fL2x) && (_context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM) == false) {
+              TransformationMenuContext parentContext = _context.withNode(_context.getNode().getParent());
+              return parentContext;
+            }
+
+            return null;
+          }
+        }.redirect(), new _FunctionTypes._return_P1_E0<Boolean, TransformationMenuContext>() {
+          public Boolean invoke(TransformationMenuContext parentContext) {
+            final SNode sourceNode = parentContext.getNode();
+            return new Object() {
+              public boolean renderingCondition(SNode node) {
+                return Sequence.fromIterable(AttributeOperations.getChildNodesAndAttributes(node, LINKS.type$fL2x)).isNotEmpty();
+              }
+            }.renderingCondition(sourceNode);
+          }
+        }));
+        ListSequence.fromList(redirectedAfter).addElement(MultiTuple.<TransformationMenuContext,_FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>from((SNodeOperations.isInstanceOf(((SNode) _context.getNode()), CONCEPTS.BVariable$B1) ? _context : null), new _FunctionTypes._return_P1_E0<Boolean, TransformationMenuContext>() {
+          public Boolean invoke(TransformationMenuContext parentContext) {
+            final SNode sourceNode = parentContext.getNode();
+            return true;
+          }
+        }));
+        ListSequence.fromList(redirectedAfter).addElement(MultiTuple.<TransformationMenuContext,_FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>from(new Object() {
+          public TransformationMenuContext redirect() {
+            // redirect to value 
+            final SNode sourceNode = _context.getNode();
+
+            // Use the grammar rules for a deep search 
+            SNode parentNode = new Parser(_context.getModel()).isEndOf(sourceNode, _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM, CONCEPTS.BVariable$B1, LINKS.value$c_cd);
+            if (parentNode != null) {
+              return _context.withNode(parentNode);
+            }
+
+            // There might be no grammar for some concepts. Try a single level check. 
+            if (SNodeOperations.isInstanceOf(sourceNode, CONCEPTS.BExpression$2v) && SNodeOperations.isInstanceOf(SNodeOperations.getParent(sourceNode), CONCEPTS.BVariable$B1) && Objects.equals(sourceNode.getContainmentLink(), LINKS.value$c_cd) && (_context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM) == false) {
+              TransformationMenuContext parentContext = _context.withNode(_context.getNode().getParent());
+              return parentContext;
+            }
+
+            return null;
+          }
+        }.redirect(), new _FunctionTypes._return_P1_E0<Boolean, TransformationMenuContext>() {
+          public Boolean invoke(TransformationMenuContext parentContext) {
+            final SNode sourceNode = parentContext.getNode();
+            return true;
+          }
+        }));
+        new Object() {
+          public void withRedirectedContext(final TransformationMenuContext _context) {
+            if (_context == null) {
+              return;
+            }
+            final SNode sourceNode = _context.getNode();
+            if (SNodeOperations.isInstanceOf(sourceNode, CONCEPTS.BVariable$B1)) {
+              final Iterable<String> matchingTexts = new StringOrSequenceQuery() {
+                public Object queryStringOrSequence() {
+                  return Sequence.<String>singleton(":");
+                }
+              }.query();
+              final boolean isApplicable = new Object() {
+                public boolean query() {
+                  return (SLinkOperations.getTarget(SNodeOperations.cast(_context.getNode(), CONCEPTS.BVariable$B1), LINKS.type$fL2x) == null);
+                }
+              }.query();
+
+              if (isApplicable && Sequence.fromIterable(matchingTexts).isNotEmpty()) {
+                ListSequence.fromList(result).addElement(new MultiTextActionItem(matchingTexts, _context) {
+                  @Override
+                  public void execute(@NotNull String pattern) {
+                    doSubstitute(pattern);
+                  }
+                  public SNode doSubstitute(@NotNull String pattern) {
+                    final SNode sourceNode = _context.getNode();
+                    SNode result = SNodeFactoryOperations.setNewChild(SNodeOperations.cast(sourceNode, CONCEPTS.BVariable$B1), LINKS.type$fL2x, null);
+                    return result;
+                  }
+                  @Override
+                  public SAbstractConcept getOutputConcept() {
+                    return CONCEPTS.BVariable$B1;
+                  }
+                });
+              }
+            }
+          }
+          public void withRedirectedContext(List<Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>> beforeContexts, List<Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>> afterContexts) {
+
+            List<Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>> contexts = (_context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM ? afterContexts : beforeContexts);
+            contexts = ListSequence.fromList(contexts).where(new IWhereFilter<Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>>() {
+              public boolean accept(Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>> it) {
+                return it != null;
+              }
+            }).toListSequence();
+
+            for (int validIndex = 0; validIndex < ListSequence.fromList(contexts).count(); validIndex++) {
+              TransformationMenuContext redirectedContext = ListSequence.fromList(contexts).getElement(validIndex)._0();
+              if (redirectedContext == null) {
+                continue;
+              }
+
+              boolean anyBeforeVisible = false;
+              for (int i = 0; i < validIndex; i++) {
+                anyBeforeVisible = anyBeforeVisible || ListSequence.fromList(contexts).getElement(i)._1().invoke(redirectedContext);
+              }
+              if (anyBeforeVisible) {
+                continue;
+              }
+
+              if (!(EditorHierachyCache.getInstance().isActiveEditor(BVariable_Editor.class, redirectedContext.getNode().getConcept(), GrammarCellsUtil.getSelectionHints(_context.getEditorContext())))) {
+                continue;
+              }
+
+              withRedirectedContext(redirectedContext);
+              break;
+            }
+          }
+        }.withRedirectedContext(redirectedBefore, redirectedAfter);
       }
     } finally {
       _context.getEditorMenuTrace().popTraceInfo();
@@ -656,7 +820,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
     final Set<SLanguage> visibleLanguages = GrammarCellsUtil.getVisibleLanguages(contextModel);
 
     {
-      final List<SConcept> subconcepts = GrammarCellsUtil.getVisibleSubconceptsNonAbstract(CONCEPTS.BinaryExpression$QV, visibleLanguages);
+      final List<SConcept> subconcepts = GrammarCellsUtil.getVisibleSubconceptsNonAbstract(CONCEPTS.BBinaryExpression$QV, visibleLanguages);
       for (final SAbstractConcept subconcept : subconcepts) {
         ListSequence.fromList(rules).addElement(new AbstractRule() {
           private List<ISymbol> symbols = ListSequence.fromList(new ArrayList<ISymbol>());
@@ -684,7 +848,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
           }
           @Override
           public SAbstractConcept getDefinedForConcept() {
-            return CONCEPTS.BinaryExpression$QV;
+            return CONCEPTS.BBinaryExpression$QV;
           }
           @Override
           public String toString() {
@@ -692,11 +856,11 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
           }
           @Override
           public boolean isLeftAssociative() {
-            return (boolean) BinaryExpression__BehaviorDescriptor.leftAssociative_id6eEbIT2TP1B.invoke(SNodeOperations.asSConcept(subconcept));
+            return (boolean) BBinaryExpression__BehaviorDescriptor.leftAssociative_id6eEbIT2TP1B.invoke(SNodeOperations.asSConcept(subconcept));
           }
           @Override
           public int getPriority() {
-            return (int) BinaryExpression__BehaviorDescriptor.priority_id6eEbIT2TPgl.invoke(SNodeOperations.asSConcept(subconcept));
+            return (int) BBinaryExpression__BehaviorDescriptor.priority_id6eEbIT2TPgl.invoke(SNodeOperations.asSConcept(subconcept));
           }
         });
       }
@@ -710,15 +874,19 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept NumberLiteral$pe = MetaAdapterFactory.getConcept(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x5d451e22fa441083L, "basic.language.structure.NumberLiteral");
-    /*package*/ static final SConcept Expression$2v = MetaAdapterFactory.getConcept(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x5d451e22fa4440a7L, "basic.language.structure.Expression");
-    /*package*/ static final SConcept ExpressionStatement$A = MetaAdapterFactory.getConcept(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x63aa2eee42dcd84fL, "basic.language.structure.ExpressionStatement");
-    /*package*/ static final SConcept BinaryExpression$QV = MetaAdapterFactory.getConcept(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x5d451e22fa44bdb5L, "basic.language.structure.BinaryExpression");
+    /*package*/ static final SConcept BNumberLiteral$pe = MetaAdapterFactory.getConcept(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x5d451e22fa441083L, "basic.language.structure.BNumberLiteral");
+    /*package*/ static final SConcept BExpression$2v = MetaAdapterFactory.getConcept(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x5d451e22fa4440a7L, "basic.language.structure.BExpression");
+    /*package*/ static final SConcept BExpressionStatement$A = MetaAdapterFactory.getConcept(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x63aa2eee42dcd84fL, "basic.language.structure.BExpressionStatement");
+    /*package*/ static final SConcept BBinaryExpression$QV = MetaAdapterFactory.getConcept(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x5d451e22fa44bdb5L, "basic.language.structure.BBinaryExpression");
+    /*package*/ static final SConcept BVariable$B1 = MetaAdapterFactory.getConcept(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x5d451e22fa43875dL, "basic.language.structure.BVariable");
+    /*package*/ static final SConcept BType$sW = MetaAdapterFactory.getConcept(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x63aa2eee42f488dfL, "basic.language.structure.BType");
   }
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink expr$Jh7H = MetaAdapterFactory.getContainmentLink(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x63aa2eee42dcd84fL, 0x63aa2eee42dcd850L, "expr");
     /*package*/ static final SContainmentLink left$4cid = MetaAdapterFactory.getContainmentLink(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x5d451e22fa44bdb5L, 0x5d451e22fa44bdb6L, "left");
     /*package*/ static final SContainmentLink right$4cKf = MetaAdapterFactory.getContainmentLink(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x5d451e22fa44bdb5L, 0x5d451e22fa44bdb8L, "right");
+    /*package*/ static final SContainmentLink type$fL2x = MetaAdapterFactory.getContainmentLink(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x5d451e22fa43875dL, 0x63aa2eee42f2e220L, "type");
+    /*package*/ static final SContainmentLink value$c_cd = MetaAdapterFactory.getContainmentLink(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x5d451e22fa43875dL, 0x5d451e22fa441086L, "value");
   }
 }

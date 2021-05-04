@@ -48,7 +48,7 @@
   </registry>
   <node concept="1TIwiD" id="5P57ybUgSgS">
     <property role="EcuMT" value="6720811154496783416" />
-    <property role="TrG5h" value="Workbook" />
+    <property role="TrG5h" value="BWorkbook" />
     <property role="19KtqR" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="5P57ybUgSty" role="1TKVEi">
@@ -56,7 +56,7 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="content" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="5P57ybUgSZM" resolve="Statement" />
+      <ref role="20lvS9" node="5P57ybUgSZM" resolve="BStatement" />
     </node>
     <node concept="PrWs8" id="5P57ybUgUzZ" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
@@ -64,8 +64,9 @@
   </node>
   <node concept="1TIwiD" id="5P57ybUgStt">
     <property role="EcuMT" value="6720811154496784221" />
-    <property role="TrG5h" value="Variable" />
-    <ref role="1TJDcQ" node="5P57ybUgSZM" resolve="Statement" />
+    <property role="TrG5h" value="BVariable" />
+    <property role="3GE5qa" value="stmt" />
+    <ref role="1TJDcQ" node="5P57ybUgSZM" resolve="BStatement" />
     <node concept="PrWs8" id="5P57ybUgStw" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -74,26 +75,33 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="value" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="5P57ybUh42B" resolve="Expression" />
+      <ref role="20lvS9" node="5P57ybUh42B" resolve="BExpression" />
+    </node>
+    <node concept="1TJgyj" id="6eEbIT2WI8w" role="1TKVEi">
+      <property role="IQ2ns" value="7181604156655985184" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="type" />
+      <ref role="20lvS9" node="6eEbIT2X8zv" resolve="BType" />
     </node>
   </node>
   <node concept="1TIwiD" id="5P57ybUgSZM">
     <property role="EcuMT" value="6720811154496786418" />
-    <property role="TrG5h" value="Statement" />
+    <property role="TrG5h" value="BStatement" />
     <property role="R5$K7" value="true" />
     <property role="3GE5qa" value="stmt" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
   </node>
   <node concept="1TIwiD" id="5P57ybUgSZN">
     <property role="EcuMT" value="6720811154496786419" />
-    <property role="TrG5h" value="EmptyStatement" />
+    <property role="TrG5h" value="BEmptyStatement" />
     <property role="3GE5qa" value="stmt" />
-    <ref role="1TJDcQ" node="5P57ybUgSZM" resolve="Statement" />
+    <ref role="1TJDcQ" node="5P57ybUgSZM" resolve="BStatement" />
   </node>
   <node concept="1TIwiD" id="5P57ybUh123">
     <property role="EcuMT" value="6720811154496819331" />
-    <property role="TrG5h" value="NumberLiteral" />
-    <ref role="1TJDcQ" node="5P57ybUh42B" resolve="Expression" />
+    <property role="TrG5h" value="BNumberLiteral" />
+    <property role="3GE5qa" value="expr" />
+    <ref role="1TJDcQ" node="5P57ybUh42B" resolve="BExpression" />
     <node concept="1TJgyi" id="5P57ybUh124" role="1TKVEl">
       <property role="IQ2nx" value="6720811154496819332" />
       <property role="TrG5h" value="value" />
@@ -102,72 +110,73 @@
   </node>
   <node concept="1TIwiD" id="5P57ybUh42B">
     <property role="EcuMT" value="6720811154496831655" />
-    <property role="TrG5h" value="Expression" />
+    <property role="TrG5h" value="BExpression" />
     <property role="R5$K7" value="true" />
     <property role="3GE5qa" value="expr" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
   </node>
   <node concept="1TIwiD" id="5P57ybUh4eR">
     <property role="EcuMT" value="6720811154496832439" />
-    <property role="TrG5h" value="PlusExpression" />
+    <property role="TrG5h" value="BPlusExpression" />
     <property role="34LRSv" value="+" />
     <property role="3GE5qa" value="expr.binary" />
-    <ref role="1TJDcQ" node="5P57ybUhbQP" resolve="BinaryExpression" />
+    <ref role="1TJDcQ" node="6eEbIT2W7qC" resolve="BArithmeticBinaryExpression" />
   </node>
   <node concept="1TIwiD" id="5P57ybUh7P7">
     <property role="EcuMT" value="6720811154496847175" />
-    <property role="TrG5h" value="MinusExpression" />
+    <property role="TrG5h" value="BMinusExpression" />
     <property role="34LRSv" value="-" />
     <property role="3GE5qa" value="expr.binary" />
-    <ref role="1TJDcQ" node="5P57ybUhbQP" resolve="BinaryExpression" />
+    <ref role="1TJDcQ" node="6eEbIT2W7qC" resolve="BArithmeticBinaryExpression" />
   </node>
   <node concept="1TIwiD" id="5P57ybUh9Bm">
     <property role="EcuMT" value="6720811154496854486" />
-    <property role="TrG5h" value="MulExpression" />
+    <property role="TrG5h" value="BMulExpression" />
     <property role="34LRSv" value="*" />
     <property role="3GE5qa" value="expr.binary" />
-    <ref role="1TJDcQ" node="5P57ybUhbQP" resolve="BinaryExpression" />
+    <ref role="1TJDcQ" node="6eEbIT2W7qC" resolve="BArithmeticBinaryExpression" />
   </node>
   <node concept="1TIwiD" id="5P57ybUhbQP">
     <property role="EcuMT" value="6720811154496863669" />
-    <property role="TrG5h" value="BinaryExpression" />
+    <property role="TrG5h" value="BBinaryExpression" />
     <property role="R5$K7" value="true" />
     <property role="3GE5qa" value="expr.binary" />
-    <ref role="1TJDcQ" node="5P57ybUh42B" resolve="Expression" />
+    <ref role="1TJDcQ" node="5P57ybUh42B" resolve="BExpression" />
     <node concept="1TJgyj" id="5P57ybUhbQQ" role="1TKVEi">
       <property role="IQ2ns" value="6720811154496863670" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="left" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="5P57ybUh42B" resolve="Expression" />
+      <ref role="20lvS9" node="5P57ybUh42B" resolve="BExpression" />
     </node>
     <node concept="1TJgyj" id="5P57ybUhbQS" role="1TKVEi">
       <property role="IQ2ns" value="6720811154496863672" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="right" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="5P57ybUh42B" resolve="Expression" />
+      <ref role="20lvS9" node="5P57ybUh42B" resolve="BExpression" />
     </node>
   </node>
   <node concept="1TIwiD" id="5P57ybUhlrq">
     <property role="EcuMT" value="6720811154496902874" />
-    <property role="TrG5h" value="EqualsExpression" />
+    <property role="TrG5h" value="BEqualsExpression" />
     <property role="34LRSv" value="==" />
     <property role="3GE5qa" value="expr.binary" />
-    <ref role="1TJDcQ" node="5P57ybUhbQP" resolve="BinaryExpression" />
+    <ref role="1TJDcQ" node="6eEbIT2Vo82" resolve="BBinaryComparisonExpression" />
   </node>
   <node concept="1TIwiD" id="5P57ybUhlrr">
     <property role="EcuMT" value="6720811154496902875" />
-    <property role="TrG5h" value="NotEqualsExpression" />
+    <property role="TrG5h" value="BNotEqualsExpression" />
     <property role="34LRSv" value="!=" />
     <property role="3GE5qa" value="expr.binary" />
-    <ref role="1TJDcQ" node="5P57ybUhbQP" resolve="BinaryExpression" />
+    <ref role="1TJDcQ" node="6eEbIT2Vo82" resolve="BBinaryComparisonExpression" />
   </node>
   <node concept="1TIwiD" id="5P57ybUhm6b">
     <property role="EcuMT" value="6720811154496905611" />
-    <property role="TrG5h" value="StringLiteral" />
+    <property role="TrG5h" value="BStringLiteral" />
     <property role="34LRSv" value="&quot;" />
-    <ref role="1TJDcQ" node="5P57ybUh42B" resolve="Expression" />
+    <property role="3GE5qa" value="expr" />
+    <ref role="1TJDcQ" node="5P57ybUh42B" resolve="BExpression" />
     <node concept="1TJgyi" id="5P57ybUhm6c" role="1TKVEl">
       <property role="IQ2nx" value="6720811154496905612" />
       <property role="TrG5h" value="value" />
@@ -176,23 +185,93 @@
   </node>
   <node concept="1TIwiD" id="6eEbIT2Rdxf">
     <property role="EcuMT" value="7181604156654540879" />
-    <property role="TrG5h" value="ExpressionStatement" />
+    <property role="TrG5h" value="BExpressionStatement" />
     <property role="3GE5qa" value="stmt" />
-    <ref role="1TJDcQ" node="5P57ybUgSZM" resolve="Statement" />
+    <ref role="1TJDcQ" node="5P57ybUgSZM" resolve="BStatement" />
     <node concept="1TJgyj" id="6eEbIT2Rdxg" role="1TKVEi">
       <property role="IQ2ns" value="7181604156654540880" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="expr" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="5P57ybUh42B" resolve="Expression" />
+      <ref role="20lvS9" node="5P57ybUh42B" resolve="BExpression" />
     </node>
   </node>
   <node concept="1TIwiD" id="6eEbIT2TOqP">
     <property role="EcuMT" value="7181604156655224501" />
-    <property role="TrG5h" value="DivExpression" />
+    <property role="TrG5h" value="BDivExpression" />
     <property role="34LRSv" value="/" />
     <property role="3GE5qa" value="expr.binary" />
-    <ref role="1TJDcQ" node="5P57ybUhbQP" resolve="BinaryExpression" />
+    <ref role="1TJDcQ" node="6eEbIT2W7qC" resolve="BArithmeticBinaryExpression" />
+  </node>
+  <node concept="1TIwiD" id="6eEbIT2VmNK">
+    <property role="EcuMT" value="7181604156655627504" />
+    <property role="3GE5qa" value="expr.binary" />
+    <property role="TrG5h" value="BGreaterThanExpression" />
+    <property role="34LRSv" value="&gt;" />
+    <ref role="1TJDcQ" node="6eEbIT2Vo82" resolve="BBinaryComparisonExpression" />
+  </node>
+  <node concept="1TIwiD" id="6eEbIT2Vnnw">
+    <property role="EcuMT" value="7181604156655629792" />
+    <property role="3GE5qa" value="expr.binary" />
+    <property role="TrG5h" value="BLowerToExpression" />
+    <property role="34LRSv" value="&lt;" />
+    <ref role="1TJDcQ" node="6eEbIT2Vo82" resolve="BBinaryComparisonExpression" />
+  </node>
+  <node concept="1TIwiD" id="6eEbIT2Vnnx">
+    <property role="EcuMT" value="7181604156655629793" />
+    <property role="3GE5qa" value="expr.binary" />
+    <property role="TrG5h" value="BGreaterEqualsExpression" />
+    <property role="34LRSv" value="&gt;=" />
+    <ref role="1TJDcQ" node="6eEbIT2Vo82" resolve="BBinaryComparisonExpression" />
+  </node>
+  <node concept="1TIwiD" id="6eEbIT2Vnny">
+    <property role="EcuMT" value="7181604156655629794" />
+    <property role="3GE5qa" value="expr.binary" />
+    <property role="TrG5h" value="BLowerEqualsExpression" />
+    <property role="34LRSv" value="&lt;=" />
+    <ref role="1TJDcQ" node="6eEbIT2Vo82" resolve="BBinaryComparisonExpression" />
+  </node>
+  <node concept="1TIwiD" id="6eEbIT2Vo82">
+    <property role="EcuMT" value="7181604156655632898" />
+    <property role="3GE5qa" value="expr.binary" />
+    <property role="TrG5h" value="BBinaryComparisonExpression" />
+    <property role="R5$K7" value="true" />
+    <ref role="1TJDcQ" node="5P57ybUhbQP" resolve="BBinaryExpression" />
+  </node>
+  <node concept="1TIwiD" id="6eEbIT2W7qC">
+    <property role="EcuMT" value="7181604156655826600" />
+    <property role="3GE5qa" value="expr.binary" />
+    <property role="TrG5h" value="BArithmeticBinaryExpression" />
+    <property role="R5$K7" value="true" />
+    <ref role="1TJDcQ" node="5P57ybUhbQP" resolve="BBinaryExpression" />
+  </node>
+  <node concept="1TIwiD" id="6eEbIT2X8zv">
+    <property role="EcuMT" value="7181604156656093407" />
+    <property role="TrG5h" value="BType" />
+    <property role="R5$K7" value="true" />
+    <property role="3GE5qa" value="type" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="6eEbIT2X8zF">
+    <property role="EcuMT" value="7181604156656093419" />
+    <property role="TrG5h" value="BIntegerType" />
+    <property role="34LRSv" value="int" />
+    <property role="3GE5qa" value="type" />
+    <ref role="1TJDcQ" node="6eEbIT2X8zv" resolve="BType" />
+  </node>
+  <node concept="1TIwiD" id="6eEbIT2X8zG">
+    <property role="EcuMT" value="7181604156656093420" />
+    <property role="TrG5h" value="BStringType" />
+    <property role="34LRSv" value="string" />
+    <property role="3GE5qa" value="type" />
+    <ref role="1TJDcQ" node="6eEbIT2X8zv" resolve="BType" />
+  </node>
+  <node concept="1TIwiD" id="6eEbIT2X8zH">
+    <property role="EcuMT" value="7181604156656093421" />
+    <property role="TrG5h" value="BBooleanType" />
+    <property role="34LRSv" value="boolean" />
+    <property role="3GE5qa" value="type" />
+    <ref role="1TJDcQ" node="6eEbIT2X8zv" resolve="BType" />
   </node>
 </model>
 
