@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debug-info version="2">
-  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1082485599095:jetbrains.mps.baseLanguage.structure.BlockStatement" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
@@ -17,26 +16,26 @@
   </root>
   <root nodeRef="r:7f045fd9-dfcb-49da-93e2-6cbcc0755104(basic.language.constraints)/7181604156654632638">
     <file name="BNumberLiteral_Constraints.java">
-      <node id="7181604156654632638" at="20,39,21,38" concept="9" />
-      <node id="7181604156654632639" at="25,60,26,41" concept="9" />
-      <node id="7181604156654632639" at="29,38,30,18" concept="6" />
-      <node id="7181604156654632639" at="32,0,33,0" concept="7" trace="validatePropertyBreakingPoint" />
-      <node id="7181604156654632639" at="34,109,35,99" concept="5" />
-      <node id="7181604156654632639" at="36,53,37,75" concept="2" />
-      <node id="7181604156654632639" at="38,7,39,20" concept="6" />
-      <node id="7181604156654633193" at="41,85,42,45" concept="6" />
-      <node id="7181604156654632638" at="46,84,47,119" concept="5" />
-      <node id="7181604156654632639" at="47,119,48,63" concept="2" />
-      <node id="7181604156654632638" at="48,63,49,22" concept="6" />
-      <node id="7181604156654632638" at="53,0,54,0" concept="7" trace="BNumberLiteral$pe" />
-      <node id="7181604156654632638" at="57,0,58,0" concept="7" trace="value$rowo" />
-      <node id="7181604156654632638" at="20,0,23,0" concept="1" trace="BNumberLiteral_Constraints#()V" />
-      <node id="7181604156654632639" at="25,0,28,0" concept="1" trace="Value_Property#(Ljetbrains/mps/smodel/runtime/ConstraintsDescriptor;)V" />
-      <node id="7181604156654632639" at="35,99,38,7" concept="3" />
-      <node id="7181604156654632639" at="41,0,44,0" concept="8" trace="staticValidateProperty#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)Z" />
-      <node id="7181604156654632639" at="28,0,32,0" concept="4" trace="hasOwnValidator#()Z" />
-      <node id="7181604156654632638" at="45,0,51,0" concept="4" trace="getSpecifiedProperties#()Ljava/util/Map;" />
-      <node id="7181604156654632639" at="33,0,41,0" concept="4" trace="validateValue#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/Object;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Z" />
+      <node id="7181604156654632638" at="20,39,21,38" concept="8" />
+      <node id="7181604156654632639" at="25,60,26,41" concept="8" />
+      <node id="7181604156654632639" at="29,38,30,18" concept="5" />
+      <node id="7181604156654632639" at="32,0,33,0" concept="6" trace="validatePropertyBreakingPoint" />
+      <node id="7181604156654632639" at="34,109,35,99" concept="4" />
+      <node id="7181604156654632639" at="36,53,37,75" concept="1" />
+      <node id="7181604156654632639" at="38,7,39,20" concept="5" />
+      <node id="7181604156654633193" at="41,85,42,45" concept="5" />
+      <node id="7181604156654632638" at="46,84,47,119" concept="4" />
+      <node id="7181604156654632639" at="47,119,48,63" concept="1" />
+      <node id="7181604156654632638" at="48,63,49,22" concept="5" />
+      <node id="7181604156654632638" at="53,0,54,0" concept="6" trace="BNumberLiteral$pe" />
+      <node id="7181604156654632638" at="57,0,58,0" concept="6" trace="value$rowo" />
+      <node id="7181604156654632638" at="20,0,23,0" concept="0" trace="BNumberLiteral_Constraints#()V" />
+      <node id="7181604156654632639" at="25,0,28,0" concept="0" trace="Value_Property#(Ljetbrains/mps/smodel/runtime/ConstraintsDescriptor;)V" />
+      <node id="7181604156654632639" at="35,99,38,7" concept="2" />
+      <node id="7181604156654632639" at="41,0,44,0" concept="7" trace="staticValidateProperty#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)Z" />
+      <node id="7181604156654632639" at="28,0,32,0" concept="3" trace="hasOwnValidator#()Z" />
+      <node id="7181604156654632638" at="45,0,51,0" concept="3" trace="getSpecifiedProperties#()Ljava/util/Map;" />
+      <node id="7181604156654632639" at="33,0,41,0" concept="3" trace="validateValue#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/Object;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Z" />
       <scope id="7181604156654632638" at="20,39,21,38" />
       <scope id="7181604156654632639" at="25,60,26,41" />
       <scope id="7181604156654632639" at="29,38,30,18" />
@@ -71,67 +70,50 @@
   </root>
   <root nodeRef="r:7f045fd9-dfcb-49da-93e2-6cbcc0755104(basic.language.constraints)/959714475430183682">
     <file name="BVariableReference_Constraints.java">
-      <node id="959714475430183682" at="30,43,31,42" concept="9" />
-      <node id="959714475430183683" at="38,44,39,20" concept="6" />
-      <node id="959714475430183683" at="46,63,47,57" concept="6" />
-      <node id="959714475430532111" at="50,80,51,133" concept="5" />
-      <node id="959714475430537323" at="51,133,52,69" concept="5" />
-      <node id="959714475430573364" at="53,45,54,88" concept="2" />
-      <node id="959714475430575526" at="55,20,56,60" concept="2" />
-      <node id="959714475430545639" at="59,47,60,83" concept="6" />
-      <node id="959714475430183682" at="66,6,67,131" concept="5" />
-      <node id="959714475430183683" at="67,131,68,42" concept="2" />
-      <node id="959714475430183682" at="68,42,69,22" concept="6" />
-      <node id="959714475430183682" at="71,0,72,0" concept="7" trace="breakingNode_9qg38y_a0a0a0a0a1a0a0a0c" />
-      <node id="959714475430183682" at="74,0,75,0" concept="7" trace="BVariableReference$zj" />
-      <node id="959714475430183682" at="75,0,76,0" concept="7" trace="BStatement$Up" />
-      <node id="959714475430183682" at="76,0,77,0" concept="7" trace="BStatementContainer$ds" />
-      <node id="959714475430183682" at="77,0,78,0" concept="7" trace="BVariable$B1" />
-      <node id="959714475430183682" at="81,0,82,0" concept="7" trace="variable$etyS" />
-      <node id="959714475430574909" at="55,18,57,13" concept="0" />
-      <node id="959714475430183682" at="30,0,33,0" concept="1" trace="BVariableReference_Constraints#()V" />
-      <node id="959714475430544554" at="59,0,62,0" concept="4" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
-      <node id="959714475430183683" at="37,0,41,0" concept="4" trace="hasOwnScopeProvider#()Z" />
-      <node id="959714475430183683" at="45,0,49,0" concept="4" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
-      <node id="959714475430567134" at="52,69,57,13" concept="3" />
-      <node id="959714475430215172" at="57,13,62,16" concept="6" />
-      <node id="959714475430183683" at="49,0,64,0" concept="4" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
-      <node id="959714475430183683" at="43,56,64,10" concept="6" />
-      <node id="959714475430183683" at="41,0,66,0" concept="4" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
-      <node id="959714475430183683" at="35,90,66,6" concept="5" />
-      <node id="959714475430183682" at="34,0,71,0" concept="4" trace="getSpecifiedReferences#()Ljava/util/Map;" />
-      <scope id="959714475430183682" at="30,43,31,42" />
-      <scope id="959714475430183683" at="38,44,39,20" />
-      <scope id="959714475430183683" at="46,63,47,57" />
-      <scope id="959714475430567136" at="53,45,54,88" />
-      <scope id="959714475430574910" at="55,20,56,60" />
-      <scope id="959714475430544555" at="59,47,60,83" />
-      <scope id="959714475430183682" at="30,0,33,0" />
-      <scope id="959714475430544554" at="59,0,62,0">
-        <var name="it" id="959714475430544554" />
+      <node id="959714475430183682" at="23,43,24,42" concept="8" />
+      <node id="959714475430901042" at="31,44,32,20" concept="5" />
+      <node id="959714475430901042" at="39,63,40,57" concept="5" />
+      <node id="959714475430901042" at="43,80,44,146" concept="4" />
+      <node id="959714475430901042" at="44,146,45,62" concept="5" />
+      <node id="959714475430183682" at="49,6,50,131" concept="4" />
+      <node id="959714475430901042" at="50,131,51,42" concept="1" />
+      <node id="959714475430183682" at="51,42,52,22" concept="5" />
+      <node id="959714475430183682" at="54,0,55,0" concept="6" trace="breakingNode_9qg38y_a0a0a0a0a1a0a0a0c" />
+      <node id="959714475430183682" at="57,0,58,0" concept="6" trace="BVariableReference$zj" />
+      <node id="959714475430183682" at="58,0,59,0" concept="6" trace="BVariable$B1" />
+      <node id="959714475430183682" at="62,0,63,0" concept="6" trace="variable$etyS" />
+      <node id="959714475430183682" at="23,0,26,0" concept="0" trace="BVariableReference_Constraints#()V" />
+      <node id="959714475430901042" at="30,0,34,0" concept="3" trace="hasOwnScopeProvider#()Z" />
+      <node id="959714475430901042" at="38,0,42,0" concept="3" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="959714475430901042" at="42,0,47,0" concept="3" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
+      <node id="959714475430901042" at="36,56,47,10" concept="5" />
+      <node id="959714475430901042" at="34,0,49,0" concept="3" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="959714475430901042" at="28,90,49,6" concept="4" />
+      <node id="959714475430183682" at="27,0,54,0" concept="3" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="959714475430183682" at="23,43,24,42" />
+      <scope id="959714475430901042" at="31,44,32,20" />
+      <scope id="959714475430901042" at="39,63,40,57" />
+      <scope id="959714475430901042" at="43,80,45,62">
+        <var name="scope" id="959714475430901042" />
       </scope>
-      <scope id="959714475430183683" at="37,0,41,0" />
-      <scope id="959714475430183683" at="45,0,49,0" />
-      <scope id="959714475430183683" at="50,80,62,16">
-        <var name="statementContext" id="959714475430532114" />
-        <var name="statementIndex" id="959714475430537326" />
+      <scope id="959714475430183682" at="23,0,26,0" />
+      <scope id="959714475430901042" at="30,0,34,0" />
+      <scope id="959714475430901042" at="38,0,42,0" />
+      <scope id="959714475430901042" at="42,0,47,0">
+        <var name="_context" id="959714475430901042" />
       </scope>
-      <scope id="959714475430183683" at="49,0,64,0">
-        <var name="_context" id="959714475430183683" />
-      </scope>
-      <scope id="959714475430183683" at="43,56,64,10" />
-      <scope id="959714475430183683" at="41,0,66,0" />
-      <scope id="959714475430183682" at="35,90,69,22">
-        <var name="d0" id="959714475430183683" />
+      <scope id="959714475430901042" at="36,56,47,10" />
+      <scope id="959714475430901042" at="34,0,49,0" />
+      <scope id="959714475430183682" at="28,90,52,22">
+        <var name="d0" id="959714475430901042" />
         <var name="references" id="959714475430183682" />
       </scope>
-      <scope id="959714475430183682" at="34,0,71,0" />
-      <unit id="959714475430183682" at="80,0,83,0" name="basic.language.constraints.BVariableReference_Constraints$LINKS" />
-      <unit id="959714475430544554" at="58,309,62,13" name="basic.language.constraints.BVariableReference_Constraints$1$1$1" />
-      <unit id="959714475430183682" at="73,0,79,0" name="basic.language.constraints.BVariableReference_Constraints$CONCEPTS" />
-      <unit id="959714475430183683" at="44,19,64,9" name="basic.language.constraints.BVariableReference_Constraints$1$1" />
-      <unit id="959714475430183683" at="36,48,66,5" name="basic.language.constraints.BVariableReference_Constraints$1" />
-      <unit id="959714475430183682" at="29,0,84,0" name="basic.language.constraints.BVariableReference_Constraints" />
+      <scope id="959714475430183682" at="27,0,54,0" />
+      <unit id="959714475430183682" at="61,0,64,0" name="basic.language.constraints.BVariableReference_Constraints$LINKS" />
+      <unit id="959714475430183682" at="56,0,60,0" name="basic.language.constraints.BVariableReference_Constraints$CONCEPTS" />
+      <unit id="959714475430901042" at="37,19,47,9" name="basic.language.constraints.BVariableReference_Constraints$1$1" />
+      <unit id="959714475430901042" at="29,48,49,5" name="basic.language.constraints.BVariableReference_Constraints$1" />
+      <unit id="959714475430183682" at="22,0,65,0" name="basic.language.constraints.BVariableReference_Constraints" />
     </file>
   </root>
 </debug-info>
