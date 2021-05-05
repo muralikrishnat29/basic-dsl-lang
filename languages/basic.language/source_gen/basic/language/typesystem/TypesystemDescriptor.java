@@ -17,6 +17,10 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 public class TypesystemDescriptor extends BaseHelginsDescriptor {
   public TypesystemDescriptor() {
     {
+      InferenceRule_Runtime inferenceRule = new typeof_BVariableReference_InferenceRule();
+      this.myInferenceRules.add(inferenceRule);
+    }
+    {
       InferenceRule_Runtime inferenceRule = new typeof_BinaryExpression_InferenceRule();
       this.myInferenceRules.add(inferenceRule);
     }
@@ -43,7 +47,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
     {
       OverloadedOpsProvider_OneTypeSpecified provider = new OverloadedOpsProvider_OneTypeSpecified() {
         {
-          this.myOperandType = createBStringType_3ist9o_a0a0a0a0a0a0a9a0();
+          this.myOperandType = createBStringType_3ist9o_a0a0a0a0a0a0a01a0();
           this.myOperationConcept = CONCEPTS.BPlusExpression$xs;
           this.myTypeIsExact = false;
           this.myIsStrong = false;
@@ -51,7 +55,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
           this.myRuleNodeId = "7181604156655855202";
         }
         public SNode getOperationType(SNode operation, SNode leftOperandType, SNode rightOperandType) {
-          return createBStringType_3ist9o_a0a1a0a0a0a0j0a();
+          return createBStringType_3ist9o_a0a1a0a0a0a0k0a();
         }
         @Override
         public void reportConflict(IRuleConflictWarningProducer producer) {
@@ -189,11 +193,11 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       return n0.getResult();
     }
   }
-  private static SNode createBStringType_3ist9o_a0a0a0a0a0a0a9a0() {
+  private static SNode createBStringType_3ist9o_a0a0a0a0a0a0a01a0() {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.BStringType$R_);
     return n0.getResult();
   }
-  private static SNode createBStringType_3ist9o_a0a1a0a0a0a0j0a() {
+  private static SNode createBStringType_3ist9o_a0a1a0a0a0a0k0a() {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.BStringType$R_);
     return n0.getResult();
   }

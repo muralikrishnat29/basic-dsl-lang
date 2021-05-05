@@ -3,7 +3,8 @@
   <component name="MPSProject">
     <projectModules>
       <modulePath path="$PROJECT_DIR$/languages/basic.language/basic.language.mpl" folder="" />
-      <modulePath path="$PROJECT_DIR$/languages/basic.language/sandbox/basic.language.sandbox.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/test.lang/test.lang.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/NewSolution/NewSolution.msd" folder="" />
     </projectModules>
   </component>
 </project>

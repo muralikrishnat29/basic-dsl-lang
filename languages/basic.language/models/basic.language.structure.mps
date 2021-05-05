@@ -17,6 +17,7 @@
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
         <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
       </concept>
+      <concept id="1169125989551" name="jetbrains.mps.lang.structure.structure.InterfaceConceptDeclaration" flags="ig" index="PlHQZ" />
       <concept id="1169127622168" name="jetbrains.mps.lang.structure.structure.InterfaceConceptReference" flags="ig" index="PrWs8">
         <reference id="1169127628841" name="intfc" index="PrY4T" />
       </concept>
@@ -61,11 +62,15 @@
     <node concept="PrWs8" id="5P57ybUgUzZ" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
+    <node concept="PrWs8" id="Ph_NG9Pt6_" role="PzmwI">
+      <ref role="PrY4T" node="Ph_NG9Opnt" resolve="BStatementContainer" />
+    </node>
   </node>
   <node concept="1TIwiD" id="5P57ybUgStt">
     <property role="EcuMT" value="6720811154496784221" />
     <property role="TrG5h" value="BVariable" />
     <property role="3GE5qa" value="stmt" />
+    <property role="34LRSv" value="var" />
     <ref role="1TJDcQ" node="5P57ybUgSZM" resolve="BStatement" />
     <node concept="PrWs8" id="5P57ybUgStw" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
@@ -272,6 +277,46 @@
     <property role="34LRSv" value="boolean" />
     <property role="3GE5qa" value="type" />
     <ref role="1TJDcQ" node="6eEbIT2X8zv" resolve="BType" />
+  </node>
+  <node concept="1TIwiD" id="Ph_NG9NjDo">
+    <property role="EcuMT" value="959714475429935704" />
+    <property role="3GE5qa" value="expr" />
+    <property role="TrG5h" value="BVariableReference" />
+    <ref role="1TJDcQ" node="5P57ybUh42B" resolve="BExpression" />
+    <node concept="1TJgyj" id="Ph_NG9NjDp" role="1TKVEi">
+      <property role="IQ2ns" value="959714475429935705" />
+      <property role="20kJfa" value="variable" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="5P57ybUgStt" resolve="BVariable" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="Ph_NG9Opnt">
+    <property role="EcuMT" value="959714475430221277" />
+    <property role="TrG5h" value="BStatementContainer" />
+  </node>
+  <node concept="1TIwiD" id="Ph_NG9PN5x">
+    <property role="EcuMT" value="959714475430588769" />
+    <property role="3GE5qa" value="stmt" />
+    <property role="TrG5h" value="BIfStatement" />
+    <property role="34LRSv" value="if" />
+    <ref role="1TJDcQ" node="5P57ybUgSZM" resolve="BStatement" />
+    <node concept="1TJgyj" id="Ph_NG9PN5M" role="1TKVEi">
+      <property role="IQ2ns" value="959714475430588786" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="condition" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="5P57ybUgSZM" resolve="BStatement" />
+    </node>
+    <node concept="1TJgyj" id="Ph_NG9PN5O" role="1TKVEi">
+      <property role="IQ2ns" value="959714475430588788" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="then" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="5P57ybUgSZM" resolve="BStatement" />
+    </node>
+    <node concept="PrWs8" id="Ph_NG9QRbD" role="PzmwI">
+      <ref role="PrY4T" node="Ph_NG9Opnt" resolve="BStatementContainer" />
+    </node>
   </node>
 </model>
 

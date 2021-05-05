@@ -20,6 +20,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_BExpressionStatement;
   private ConceptPresentation props_BGreaterEqualsExpression;
   private ConceptPresentation props_BGreaterThanExpression;
+  private ConceptPresentation props_BIfStatement;
   private ConceptPresentation props_BIntegerType;
   private ConceptPresentation props_BLowerEqualsExpression;
   private ConceptPresentation props_BLowerToExpression;
@@ -29,10 +30,12 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_BNumberLiteral;
   private ConceptPresentation props_BPlusExpression;
   private ConceptPresentation props_BStatement;
+  private ConceptPresentation props_BStatementContainer;
   private ConceptPresentation props_BStringLiteral;
   private ConceptPresentation props_BStringType;
   private ConceptPresentation props_BType;
   private ConceptPresentation props_BVariable;
+  private ConceptPresentation props_BVariableReference;
   private ConceptPresentation props_BWorkbook;
 
   @Override
@@ -113,6 +116,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_BGreaterThanExpression = cpb.create();
         }
         return props_BGreaterThanExpression;
+      case LanguageConceptSwitch.BIfStatement:
+        if (props_BIfStatement == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("if");
+          props_BIfStatement = cpb.create();
+        }
+        return props_BIfStatement;
       case LanguageConceptSwitch.BIntegerType:
         if (props_BIntegerType == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -175,6 +185,12 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_BStatement = cpb.create();
         }
         return props_BStatement;
+      case LanguageConceptSwitch.BStatementContainer:
+        if (props_BStatementContainer == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_BStatementContainer = cpb.create();
+        }
+        return props_BStatementContainer;
       case LanguageConceptSwitch.BStringLiteral:
         if (props_BStringLiteral == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -202,6 +218,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_BVariable = cpb.create();
         }
         return props_BVariable;
+      case LanguageConceptSwitch.BVariableReference:
+        if (props_BVariableReference == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0xd51973b09cd3a58L, 0xd51973b09cd3a59L, "variable", "", "");
+          props_BVariableReference = cpb.create();
+        }
+        return props_BVariableReference;
       case LanguageConceptSwitch.BWorkbook:
         if (props_BWorkbook == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

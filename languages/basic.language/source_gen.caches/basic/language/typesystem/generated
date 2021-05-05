@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-8rlpp4fn4aw6ogy7153r5nwliy6xeh3">
-  <files names="TypesystemDescriptor.java:check_Workbook_NonTypesystemRule.java:typeof_BinaryExpression_InferenceRule.java:typeof_NumberLiteral_InferenceRule.java:typeof_StringLiteral_InferenceRule.java:typeof_Variable_InferenceRule.java" />
+<product version="3" modelHash="14foel5bmzsp46p3z2zw7avfxg4oh6w">
+  <files names="TypesystemDescriptor.java:check_Workbook_NonTypesystemRule.java:typeof_BVariableReference_InferenceRule.java:typeof_BinaryExpression_InferenceRule.java:typeof_NumberLiteral_InferenceRule.java:typeof_StringLiteral_InferenceRule.java:typeof_Variable_InferenceRule.java" />
 </product>
 

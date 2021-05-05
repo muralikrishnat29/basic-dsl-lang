@@ -20,20 +20,23 @@ public final class LanguageConceptSwitch {
   public static final int BExpressionStatement = 8;
   public static final int BGreaterEqualsExpression = 9;
   public static final int BGreaterThanExpression = 10;
-  public static final int BIntegerType = 11;
-  public static final int BLowerEqualsExpression = 12;
-  public static final int BLowerToExpression = 13;
-  public static final int BMinusExpression = 14;
-  public static final int BMulExpression = 15;
-  public static final int BNotEqualsExpression = 16;
-  public static final int BNumberLiteral = 17;
-  public static final int BPlusExpression = 18;
-  public static final int BStatement = 19;
-  public static final int BStringLiteral = 20;
-  public static final int BStringType = 21;
-  public static final int BType = 22;
-  public static final int BVariable = 23;
-  public static final int BWorkbook = 24;
+  public static final int BIfStatement = 11;
+  public static final int BIntegerType = 12;
+  public static final int BLowerEqualsExpression = 13;
+  public static final int BLowerToExpression = 14;
+  public static final int BMinusExpression = 15;
+  public static final int BMulExpression = 16;
+  public static final int BNotEqualsExpression = 17;
+  public static final int BNumberLiteral = 18;
+  public static final int BPlusExpression = 19;
+  public static final int BStatement = 20;
+  public static final int BStatementContainer = 21;
+  public static final int BStringLiteral = 22;
+  public static final int BStringType = 23;
+  public static final int BType = 24;
+  public static final int BVariable = 25;
+  public static final int BVariableReference = 26;
+  public static final int BWorkbook = 27;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL);
@@ -48,6 +51,7 @@ public final class LanguageConceptSwitch {
     builder.put(0x63aa2eee42dcd84fL, BExpressionStatement);
     builder.put(0x63aa2eee42ed75e1L, BGreaterEqualsExpression);
     builder.put(0x63aa2eee42ed6cf0L, BGreaterThanExpression);
+    builder.put(0xd51973b09d73161L, BIfStatement);
     builder.put(0x63aa2eee42f488ebL, BIntegerType);
     builder.put(0x63aa2eee42ed75e2L, BLowerEqualsExpression);
     builder.put(0x63aa2eee42ed75e0L, BLowerToExpression);
@@ -57,10 +61,12 @@ public final class LanguageConceptSwitch {
     builder.put(0x5d451e22fa441083L, BNumberLiteral);
     builder.put(0x5d451e22fa4443b7L, BPlusExpression);
     builder.put(0x5d451e22fa438ff2L, BStatement);
+    builder.put(0xd51973b09d195ddL, BStatementContainer);
     builder.put(0x5d451e22fa45618bL, BStringLiteral);
     builder.put(0x63aa2eee42f488ecL, BStringType);
     builder.put(0x63aa2eee42f488dfL, BType);
     builder.put(0x5d451e22fa43875dL, BVariable);
+    builder.put(0xd51973b09cd3a58L, BVariableReference);
     builder.put(0x5d451e22fa438438L, BWorkbook);
     myIndex = builder.seal();
   }

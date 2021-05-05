@@ -3,7 +3,6 @@
   <persistence version="9" />
   <languages>
     <use id="df20d2ac-476c-4ef8-8b3f-4802becda85f" name="basic.language" version="0" />
-    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="11" />
   </languages>
   <imports />
   <registry>
@@ -28,6 +27,7 @@
         <child id="6720811154496863670" name="left" index="2B0qek" />
         <child id="6720811154496863672" name="right" index="2B0qeq" />
       </concept>
+      <concept id="6720811154496786419" name="basic.language.structure.BEmptyStatement" flags="ng" index="2B1D7h" />
       <concept id="6720811154496784221" name="basic.language.structure.BVariable" flags="ng" index="2B1D_Z">
         <child id="7181604156655985184" name="type" index="xmcNe" />
         <child id="6720811154496819334" name="value" index="2B0gU$" />
@@ -120,6 +120,13 @@
         </node>
       </node>
     </node>
+    <node concept="2B1D_Z" id="2yfmu0k9zoL" role="2B1D_0">
+      <property role="TrG5h" value="x" />
+      <node concept="2B0gUx" id="B4rJ6mKNY_" role="2B0gU$">
+        <property role="2B0gUA" value="44" />
+      </node>
+    </node>
+    <node concept="2B1D7h" id="Ph_NG9Ncn1" role="2B1D_0" />
   </node>
 </model>
 

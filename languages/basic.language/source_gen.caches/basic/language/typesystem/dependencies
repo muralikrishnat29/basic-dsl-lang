@@ -2,6 +2,7 @@
 <dependenciesRoot>
   <dependency className="basic.language.typesystem.TypesystemDescriptor">
     <classNode dependClassName="basic.language.typesystem.check_Workbook_NonTypesystemRule" />
+    <classNode dependClassName="basic.language.typesystem.typeof_BVariableReference_InferenceRule" />
     <classNode dependClassName="basic.language.typesystem.typeof_BinaryExpression_InferenceRule" />
     <classNode dependClassName="basic.language.typesystem.typeof_NumberLiteral_InferenceRule" />
     <classNode dependClassName="basic.language.typesystem.typeof_StringLiteral_InferenceRule" />
@@ -41,6 +42,19 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.AbstractNonTypesystemRule_Runtime" />
     <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.NonTypesystemRule_Runtime" />
+  </dependency>
+  <dependency className="basic.language.typesystem.typeof_BVariableReference_InferenceRule">
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="jetbrains.mps.typesystem.inference.EquationInfo" />
+    <classNode dependClassName="jetbrains.mps.typesystem.inference.TypeCheckingContext" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SReferenceLink" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.AbstractInferenceRule_Runtime" />
+    <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.InferenceRule_Runtime" />
   </dependency>
   <dependency className="basic.language.typesystem.typeof_BinaryExpression_InferenceRule">
     <classNode dependClassName="java.lang.Runnable" />
