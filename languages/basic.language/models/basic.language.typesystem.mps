@@ -8,6 +8,7 @@
   <imports>
     <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" />
     <import index="icqw" ref="r:c0c8b578-576c-46e7-b88f-7c740f9b98e3(basic.language.structure)" />
+    <import index="1bk0" ref="r:3388e935-4911-4460-9053-f768549e3afd(basic.language.behavior)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
@@ -62,6 +63,9 @@
         <child id="1068581242865" name="localVariableDeclaration" index="3cpWs9" />
       </concept>
       <concept id="1068581242863" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclaration" flags="nr" index="3cpWsn" />
+      <concept id="1204053956946" name="jetbrains.mps.baseLanguage.structure.IMethodCall" flags="ng" index="1ndlxa">
+        <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
+      </concept>
       <concept id="1081773326031" name="jetbrains.mps.baseLanguage.structure.BinaryOperation" flags="nn" index="3uHJSO">
         <child id="1081773367579" name="rightExpression" index="3uHU7w" />
         <child id="1081773367580" name="leftExpression" index="3uHU7B" />
@@ -150,6 +154,7 @@
       <concept id="1177026924588" name="jetbrains.mps.lang.smodel.structure.RefConcept_Reference" flags="nn" index="chp4Y">
         <reference id="1177026940964" name="conceptDeclaration" index="cht4Q" />
       </concept>
+      <concept id="1179409122411" name="jetbrains.mps.lang.smodel.structure.Node_ConceptMethodCall" flags="nn" index="2qgKlT" />
       <concept id="4693937538533521280" name="jetbrains.mps.lang.smodel.structure.OfConceptOperation" flags="ng" index="v3k3i">
         <child id="4693937538533538124" name="requestedConcept" index="v3oSu" />
       </concept>
@@ -167,9 +172,6 @@
       </concept>
       <concept id="1138056143562" name="jetbrains.mps.lang.smodel.structure.SLinkAccess" flags="nn" index="3TrEf2">
         <reference id="1138056516764" name="link" index="3Tt5mk" />
-      </concept>
-      <concept id="1138056282393" name="jetbrains.mps.lang.smodel.structure.SLinkListAccess" flags="nn" index="3Tsc0h">
-        <reference id="1138056546658" name="link" index="3TtcxE" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -204,7 +206,7 @@
     </language>
   </registry>
   <node concept="18kY7G" id="6eEbIT2UiAq">
-    <property role="TrG5h" value="check_Workbook" />
+    <property role="TrG5h" value="check_duplicateVariableNames" />
     <node concept="3clFbS" id="6eEbIT2UiAr" role="18ibNy">
       <node concept="3cpWs8" id="6eEbIT2UlYK" role="3cqZAp">
         <node concept="3cpWsn" id="6eEbIT2UlYN" role="3cpWs9">
@@ -224,12 +226,12 @@
           <property role="TrG5h" value="variable" />
         </node>
         <node concept="2OqwBi" id="6eEbIT2Uo2K" role="2GsD0m">
-          <node concept="2OqwBi" id="6eEbIT2Umtw" role="2Oq$k0">
+          <node concept="2OqwBi" id="Ph_NG9RMC_" role="2Oq$k0">
             <node concept="1YBJjd" id="6eEbIT2UmgR" role="2Oq$k0">
-              <ref role="1YBMHb" node="6eEbIT2UiAt" resolve="workbook" />
+              <ref role="1YBMHb" node="6eEbIT2UiAt" resolve="bStatementContainer" />
             </node>
-            <node concept="3Tsc0h" id="6eEbIT2UmGy" role="2OqNvi">
-              <ref role="3TtcxE" to="icqw:5P57ybUgSty" resolve="content" />
+            <node concept="2qgKlT" id="Ph_NG9RNgg" role="2OqNvi">
+              <ref role="37wK5l" to="1bk0:Ph_NG9Pt5h" resolve="getStatements" />
             </node>
           </node>
           <node concept="v3k3i" id="6eEbIT2Uqu2" role="2OqNvi">
@@ -297,8 +299,8 @@
       </node>
     </node>
     <node concept="1YaCAy" id="6eEbIT2UiAt" role="1YuTPh">
-      <property role="TrG5h" value="workbook" />
-      <ref role="1YaFvo" to="icqw:5P57ybUgSgS" resolve="BWorkbook" />
+      <property role="TrG5h" value="bStatementContainer" />
+      <ref role="1YaFvo" to="icqw:Ph_NG9Opnt" resolve="BStatementContainer" />
     </node>
   </node>
   <node concept="1YbPZF" id="6eEbIT2UXlf">

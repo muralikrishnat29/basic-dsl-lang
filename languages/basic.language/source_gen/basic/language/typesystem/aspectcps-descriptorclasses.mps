@@ -8,6 +8,7 @@
   <imports>
     <import index="d0e3" ref="r:6dae767d-4ecf-4640-8c92-68f93fef7dff(basic.language.typesystem)" />
     <import index="c17a" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.language(MPS.OpenAPI/)" />
+    <import index="1bk0" ref="r:3388e935-4911-4460-9053-f768549e3afd(basic.language.behavior)" />
     <import index="2gg1" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.errors(MPS.Core/)" />
     <import index="qurh" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.lang.typesystem.runtime(MPS.Core/)" />
     <import index="33ny" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util(JDK/)" />
@@ -201,6 +202,7 @@
       <concept id="1177026924588" name="jetbrains.mps.lang.smodel.structure.RefConcept_Reference" flags="nn" index="chp4Y">
         <reference id="1177026940964" name="conceptDeclaration" index="cht4Q" />
       </concept>
+      <concept id="1179409122411" name="jetbrains.mps.lang.smodel.structure.Node_ConceptMethodCall" flags="nn" index="2qgKlT" />
       <concept id="4693937538533521280" name="jetbrains.mps.lang.smodel.structure.OfConceptOperation" flags="ng" index="v3k3i">
         <child id="4693937538533538124" name="requestedConcept" index="v3oSu" />
       </concept>
@@ -222,9 +224,6 @@
       </concept>
       <concept id="1138056143562" name="jetbrains.mps.lang.smodel.structure.SLinkAccess" flags="nn" index="3TrEf2">
         <reference id="1138056516764" name="link" index="3Tt5mk" />
-      </concept>
-      <concept id="1138056282393" name="jetbrains.mps.lang.smodel.structure.SLinkListAccess" flags="nn" index="3Tsc0h">
-        <reference id="1138056546658" name="link" index="3TtcxE" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -263,15 +262,15 @@
     <node concept="39e2AJ" id="1" role="39e2AI">
       <property role="39e3Y2" value="classForRule" />
       <node concept="39e2AG" id="6" role="39e3Y0">
-        <ref role="39e2AK" to="d0e3:6eEbIT2UiAq" resolve="check_Workbook" />
+        <ref role="39e2AK" to="d0e3:6eEbIT2UiAq" resolve="check_duplicateVariableNames" />
         <node concept="385nmt" id="c" role="385vvn">
-          <property role="385vuF" value="check_Workbook" />
+          <property role="385vuF" value="check_duplicateVariableNames" />
           <node concept="3u3nmq" id="e" role="385v07">
             <property role="3u3nmv" value="7181604156655348122" />
           </node>
         </node>
         <node concept="39e2AT" id="d" role="39e2AY">
-          <ref role="39e2AS" node="aI" resolve="check_Workbook_NonTypesystemRule" />
+          <ref role="39e2AS" node="aI" resolve="check_duplicateVariableNames_NonTypesystemRule" />
         </node>
       </node>
       <node concept="39e2AG" id="7" role="39e3Y0">
@@ -338,9 +337,9 @@
     <node concept="39e2AJ" id="2" role="39e2AI">
       <property role="39e3Y2" value="isApplicableMethod" />
       <node concept="39e2AG" id="u" role="39e3Y0">
-        <ref role="39e2AK" to="d0e3:6eEbIT2UiAq" resolve="check_Workbook" />
+        <ref role="39e2AK" to="d0e3:6eEbIT2UiAq" resolve="check_duplicateVariableNames" />
         <node concept="385nmt" id="$" role="385vvn">
-          <property role="385vuF" value="check_Workbook" />
+          <property role="385vuF" value="check_duplicateVariableNames" />
           <node concept="3u3nmq" id="A" role="385v07">
             <property role="3u3nmv" value="7181604156655348122" />
           </node>
@@ -413,9 +412,9 @@
     <node concept="39e2AJ" id="3" role="39e2AI">
       <property role="39e3Y2" value="mainMethodForRule" />
       <node concept="39e2AG" id="Q" role="39e3Y0">
-        <ref role="39e2AK" to="d0e3:6eEbIT2UiAq" resolve="check_Workbook" />
+        <ref role="39e2AK" to="d0e3:6eEbIT2UiAq" resolve="check_duplicateVariableNames" />
         <node concept="385nmt" id="W" role="385vvn">
-          <property role="385vuF" value="check_Workbook" />
+          <property role="385vuF" value="check_duplicateVariableNames" />
           <node concept="3u3nmq" id="Y" role="385v07">
             <property role="3u3nmv" value="7181604156655348122" />
           </node>
@@ -725,7 +724,7 @@
                 </node>
                 <node concept="2ShNRf" id="2W" role="33vP2m">
                   <node concept="1pGfFk" id="2X" role="2ShVmc">
-                    <ref role="37wK5l" node="aJ" resolve="check_Workbook_NonTypesystemRule" />
+                    <ref role="37wK5l" node="aJ" resolve="check_duplicateVariableNames_NonTypesystemRule" />
                   </node>
                 </node>
               </node>
@@ -1868,7 +1867,7 @@
     </node>
   </node>
   <node concept="312cEu" id="aI">
-    <property role="TrG5h" value="check_Workbook_NonTypesystemRule" />
+    <property role="TrG5h" value="check_duplicateVariableNames_NonTypesystemRule" />
     <uo k="s:originTrace" v="n:7181604156655348122" />
     <node concept="3clFbW" id="aJ" role="jymVt">
       <uo k="s:originTrace" v="n:7181604156655348122" />
@@ -1890,7 +1889,7 @@
       </node>
       <node concept="37vLTG" id="aV" role="3clF46">
         <property role="3TUv4t" value="true" />
-        <property role="TrG5h" value="workbook" />
+        <property role="TrG5h" value="bStatementContainer" />
         <uo k="s:originTrace" v="n:7181604156655348122" />
         <node concept="3Tqbb2" id="b0" role="1tU5fm">
           <uo k="s:originTrace" v="n:7181604156655348122" />
@@ -1946,14 +1945,14 @@
           <node concept="2OqwBi" id="bc" role="2GsD0m">
             <uo k="s:originTrace" v="n:7181604156655370416" />
             <node concept="2OqwBi" id="be" role="2Oq$k0">
-              <uo k="s:originTrace" v="n:7181604156655363936" />
+              <uo k="s:originTrace" v="n:959714475431111205" />
               <node concept="37vLTw" id="bg" role="2Oq$k0">
-                <ref role="3cqZAo" node="aV" resolve="workbook" />
+                <ref role="3cqZAo" node="aV" resolve="bStatementContainer" />
                 <uo k="s:originTrace" v="n:7181604156655363127" />
               </node>
-              <node concept="3Tsc0h" id="bh" role="2OqNvi">
-                <ref role="3TtcxE" to="icqw:5P57ybUgSty" resolve="content" />
-                <uo k="s:originTrace" v="n:7181604156655364898" />
+              <node concept="2qgKlT" id="bh" role="2OqNvi">
+                <ref role="37wK5l" to="1bk0:Ph_NG9Pt5h" resolve="getStatements" />
+                <uo k="s:originTrace" v="n:959714475431113744" />
               </node>
             </node>
             <node concept="v3k3i" id="bf" role="2OqNvi">
@@ -2109,7 +2108,7 @@
         <node concept="3cpWs6" id="bY" role="3cqZAp">
           <uo k="s:originTrace" v="n:7181604156655348122" />
           <node concept="35c_gC" id="bZ" role="3cqZAk">
-            <ref role="35c_gD" to="icqw:5P57ybUgSgS" resolve="BWorkbook" />
+            <ref role="35c_gD" to="icqw:Ph_NG9Opnt" resolve="BStatementContainer" />
             <uo k="s:originTrace" v="n:7181604156655348122" />
           </node>
         </node>

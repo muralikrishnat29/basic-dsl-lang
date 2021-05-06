@@ -37,7 +37,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       this.myInferenceRules.add(inferenceRule);
     }
     {
-      NonTypesystemRule_Runtime nonTypesystemRule = new check_Workbook_NonTypesystemRule();
+      NonTypesystemRule_Runtime nonTypesystemRule = new check_duplicateVariableNames_NonTypesystemRule();
       this.myNonTypesystemRules.add(nonTypesystemRule);
     }
     this.myOverloadedOperationsTypesProviders.add(new CustomOverloadedOperationsTypesProvider_a(CONCEPTS.BBinaryComparisonExpression$oc));

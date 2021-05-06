@@ -12,7 +12,7 @@ import jetbrains.mps.internal.collections.runtime.SetSequence;
 import java.util.HashSet;
 import jetbrains.mps.internal.collections.runtime.Sequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import basic.language.behavior.BStatementContainer__BehaviorDescriptor;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.errors.messageTargets.MessageTarget;
 import jetbrains.mps.errors.messageTargets.NodeMessageTarget;
@@ -20,15 +20,15 @@ import jetbrains.mps.errors.IErrorReporter;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import org.jetbrains.mps.openapi.language.SProperty;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
-import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SConcept;
+import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 
-public class check_Workbook_NonTypesystemRule extends AbstractNonTypesystemRule_Runtime implements NonTypesystemRule_Runtime {
-  public check_Workbook_NonTypesystemRule() {
+public class check_duplicateVariableNames_NonTypesystemRule extends AbstractNonTypesystemRule_Runtime implements NonTypesystemRule_Runtime {
+  public check_duplicateVariableNames_NonTypesystemRule() {
   }
-  public void applyRule(final SNode workbook, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
+  public void applyRule(final SNode bStatementContainer, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     Set<String> varNames = SetSequence.fromSet(new HashSet<String>());
-    for (SNode variable : Sequence.fromIterable(SNodeOperations.ofConcept(SLinkOperations.getChildren(workbook, LINKS.content$Ydej), CONCEPTS.BVariable$B1))) {
+    for (SNode variable : Sequence.fromIterable(SNodeOperations.ofConcept(BStatementContainer__BehaviorDescriptor.getStatements_idPh_NG9Pt5h.invoke(bStatementContainer), CONCEPTS.BVariable$B1))) {
       if (SetSequence.fromSet(varNames).contains(SPropertyOperations.getString(variable, PROPS.name$MnvL))) {
         {
           final MessageTarget errorTarget = new NodeMessageTarget();
@@ -39,7 +39,7 @@ public class check_Workbook_NonTypesystemRule extends AbstractNonTypesystemRule_
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.BWorkbook$vo;
+    return CONCEPTS.BStatementContainer$ds;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -52,12 +52,8 @@ public class check_Workbook_NonTypesystemRule extends AbstractNonTypesystemRule_
     /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
   }
 
-  private static final class LINKS {
-    /*package*/ static final SContainmentLink content$Ydej = MetaAdapterFactory.getContainmentLink(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x5d451e22fa438438L, 0x5d451e22fa438762L, "content");
-  }
-
   private static final class CONCEPTS {
     /*package*/ static final SConcept BVariable$B1 = MetaAdapterFactory.getConcept(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x5d451e22fa43875dL, "basic.language.structure.BVariable");
-    /*package*/ static final SConcept BWorkbook$vo = MetaAdapterFactory.getConcept(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x5d451e22fa438438L, "basic.language.structure.BWorkbook");
+    /*package*/ static final SInterfaceConcept BStatementContainer$ds = MetaAdapterFactory.getInterfaceConcept(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0xd51973b09d195ddL, "basic.language.structure.BStatementContainer");
   }
 }
