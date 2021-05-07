@@ -12,7 +12,53 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
   <root>
     <file name="ConstraintsAspectDescriptor.java">
-      <unit at="13,0,29,0" name="test.lang.constraints.ConstraintsAspectDescriptor" />
+      <unit at="13,0,31,0" name="test.lang.constraints.ConstraintsAspectDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:30a46fba-693a-4875-884e-355dbd354b49(test.lang.constraints)/2289659709945976829">
+    <file name="BExecuteSingleTestCase_Constraints.java">
+      <node id="2289659709945976829" at="25,47,26,46" concept="9" />
+      <node id="2289659709945976830" at="33,44,34,20" concept="5" />
+      <node id="2289659709945976830" at="41,63,42,57" concept="5" />
+      <node id="2289659709945985629" at="45,80,46,167" concept="5" />
+      <node id="2289659709945976829" at="50,6,51,131" concept="4" />
+      <node id="2289659709945976830" at="51,131,52,42" concept="1" />
+      <node id="2289659709945976829" at="52,42,53,22" concept="5" />
+      <node id="2289659709945976829" at="55,0,56,0" concept="7" trace="breakingNode_th6vhm_a0a0a0a0a1a0a0a0c" />
+      <node id="2289659709945976829" at="58,0,59,0" concept="7" trace="BExecuteSingleTestCase$E$" />
+      <node id="2289659709945976829" at="62,0,63,0" concept="7" trace="test$v_RB" />
+      <node id="2289659709945976829" at="63,0,64,0" concept="7" trace="suite$me96" />
+      <node id="2289659709945976829" at="64,0,65,0" concept="7" trace="tests$GC3G" />
+      <node id="2289659709945976829" at="25,0,28,0" concept="0" trace="BExecuteSingleTestCase_Constraints#()V" />
+      <node id="2289659709945976830" at="32,0,36,0" concept="3" trace="hasOwnScopeProvider#()Z" />
+      <node id="2289659709945976830" at="40,0,44,0" concept="3" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="2289659709945976830" at="44,0,48,0" concept="3" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
+      <node id="2289659709945976830" at="38,56,48,10" concept="5" />
+      <node id="2289659709945976830" at="36,0,50,0" concept="3" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="2289659709945976830" at="30,90,50,6" concept="4" />
+      <node id="2289659709945976829" at="29,0,55,0" concept="3" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="2289659709945976829" at="25,47,26,46" />
+      <scope id="2289659709945976830" at="33,44,34,20" />
+      <scope id="2289659709945976830" at="41,63,42,57" />
+      <scope id="2289659709945976830" at="45,80,46,167" />
+      <scope id="2289659709945976829" at="25,0,28,0" />
+      <scope id="2289659709945976830" at="32,0,36,0" />
+      <scope id="2289659709945976830" at="40,0,44,0" />
+      <scope id="2289659709945976830" at="44,0,48,0">
+        <var name="_context" id="2289659709945976830" />
+      </scope>
+      <scope id="2289659709945976830" at="38,56,48,10" />
+      <scope id="2289659709945976830" at="36,0,50,0" />
+      <scope id="2289659709945976829" at="30,90,53,22">
+        <var name="d0" id="2289659709945976830" />
+        <var name="references" id="2289659709945976829" />
+      </scope>
+      <scope id="2289659709945976829" at="29,0,55,0" />
+      <unit id="2289659709945976829" at="57,0,60,0" name="test.lang.constraints.BExecuteSingleTestCase_Constraints$CONCEPTS" />
+      <unit id="2289659709945976829" at="61,0,66,0" name="test.lang.constraints.BExecuteSingleTestCase_Constraints$LINKS" />
+      <unit id="2289659709945976830" at="39,19,48,9" name="test.lang.constraints.BExecuteSingleTestCase_Constraints$1$1" />
+      <unit id="2289659709945976830" at="31,48,50,5" name="test.lang.constraints.BExecuteSingleTestCase_Constraints$1" />
+      <unit id="2289659709945976829" at="24,0,67,0" name="test.lang.constraints.BExecuteSingleTestCase_Constraints" />
     </file>
   </root>
   <root nodeRef="r:30a46fba-693a-4875-884e-355dbd354b49(test.lang.constraints)/959714475429903240">

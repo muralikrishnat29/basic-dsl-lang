@@ -10,6 +10,8 @@ import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
   private ConceptPresentation props_BAssertStatement;
+  private ConceptPresentation props_BExecuteSingleTestCase;
+  private ConceptPresentation props_BExecuteTests;
   private ConceptPresentation props_BTestCase;
   private ConceptPresentation props_BTestSuite;
 
@@ -25,6 +27,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_BAssertStatement = cpb.create();
         }
         return props_BAssertStatement;
+      case LanguageConceptSwitch.BExecuteSingleTestCase:
+        if (props_BExecuteSingleTestCase == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("execute test");
+          props_BExecuteSingleTestCase = cpb.create();
+        }
+        return props_BExecuteSingleTestCase;
+      case LanguageConceptSwitch.BExecuteTests:
+        if (props_BExecuteTests == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("execute tests");
+          props_BExecuteTests = cpb.create();
+        }
+        return props_BExecuteTests;
       case LanguageConceptSwitch.BTestCase:
         if (props_BTestCase == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

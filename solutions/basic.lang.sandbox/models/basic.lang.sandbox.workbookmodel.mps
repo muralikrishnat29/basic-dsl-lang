@@ -17,6 +17,7 @@
       </concept>
       <concept id="7181604156655627504" name="basic.language.structure.BGreaterThanExpression" flags="ng" index="xhO8u" />
       <concept id="7181604156655629792" name="basic.language.structure.BLowerToExpression" flags="ng" index="xhPGe" />
+      <concept id="7181604156656093419" name="basic.language.structure.BIntegerType" flags="ng" index="xnEo5" />
       <concept id="7181604156654540879" name="basic.language.structure.BExpressionStatement" flags="ng" index="xtJqx">
         <child id="7181604156654540880" name="expr" index="xtJqY" />
       </concept>
@@ -34,6 +35,7 @@
       </concept>
       <concept id="6720811154496786419" name="basic.language.structure.BEmptyStatement" flags="ng" index="2B1D7h" />
       <concept id="6720811154496784221" name="basic.language.structure.BVariable" flags="ng" index="2B1D_Z">
+        <child id="7181604156655985184" name="type" index="xmcNe" />
         <child id="6720811154496819334" name="value" index="2B0gU$" />
       </concept>
       <concept id="6720811154496783416" name="basic.language.structure.BWorkbook" flags="ng" index="2B1DCq">
@@ -48,6 +50,13 @@
     <language id="f10d1faa-a8dd-47b7-b53f-63749a13e53b" name="test.lang">
       <concept id="959714475429900401" name="test.lang.structure.BAssertStatement" flags="ng" index="4Bita">
         <child id="959714475429900402" name="expr" index="4Bit9" />
+      </concept>
+      <concept id="2289659709945869329" name="test.lang.structure.BExecuteTests" flags="ng" index="s7BlL">
+        <reference id="2289659709945869330" name="testSuite" index="s7BlM" />
+      </concept>
+      <concept id="2289659709945924029" name="test.lang.structure.BExecuteSingleTestCase" flags="ng" index="s7Ozt">
+        <reference id="2289659709945948482" name="suite" index="s7awy" />
+        <reference id="2289659709945924030" name="test" index="s7Ozu" />
       </concept>
       <concept id="703809425672192116" name="test.lang.structure.BTestSuite" flags="ng" index="2v1MU5">
         <child id="703809425672192122" name="tests" index="2v1MUb" />
@@ -85,6 +94,7 @@
           <property role="2B0gUA" value="10" />
         </node>
       </node>
+      <node concept="xnEo5" id="1Z6wm03Qcc8" role="xmcNe" />
     </node>
     <node concept="2B1D_Z" id="Ph_NG9O7F4" role="2B1D_0">
       <property role="TrG5h" value="a" />
@@ -158,7 +168,16 @@
       <node concept="4BaPz" id="Ph_NG9PxM6" role="2B0gU$">
         <ref role="4BaPy" node="Ph_NG9O7IP" resolve="b" />
       </node>
+      <node concept="xnEo5" id="1Z6wm03PEKU" role="xmcNe" />
     </node>
+    <node concept="s7BlL" id="1Z6wm03Qpst" role="2B1D_0">
+      <ref role="s7BlM" node="Ph_NG9NiG6" resolve="myTests" />
+    </node>
+    <node concept="s7Ozt" id="1Z6wm03QHNe" role="2B1D_0">
+      <ref role="s7awy" node="Ph_NG9NiG6" resolve="myTests" />
+      <ref role="s7Ozu" node="Ph_NG9NiG7" resolve="test1" />
+    </node>
+    <node concept="2B1D7h" id="1Z6wm03Qv_a" role="2B1D_0" />
     <node concept="2B1D7h" id="Ph_NG9O7GB" role="2B1D_0" />
     <node concept="2B1D7h" id="Ph_NG9O7G0" role="2B1D_0" />
   </node>
@@ -217,6 +236,12 @@
           </node>
         </node>
       </node>
+    </node>
+  </node>
+  <node concept="2v1MU5" id="1Z6wm03Qy$Z">
+    <property role="TrG5h" value="newTests" />
+    <node concept="2v1MU6" id="1Z6wm03Qy_0" role="2v1MUb">
+      <property role="TrG5h" value="test1" />
     </node>
   </node>
 </model>

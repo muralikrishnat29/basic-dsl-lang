@@ -18,6 +18,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptBBinaryExpression = createDescriptorForBBinaryExpression();
   /*package*/ final ConceptDescriptor myConceptBBooleanType = createDescriptorForBBooleanType();
   /*package*/ final ConceptDescriptor myConceptBDivExpression = createDescriptorForBDivExpression();
+  /*package*/ final ConceptDescriptor myConceptBDoubleType = createDescriptorForBDoubleType();
   /*package*/ final ConceptDescriptor myConceptBEmptyStatement = createDescriptorForBEmptyStatement();
   /*package*/ final ConceptDescriptor myConceptBEqualsExpression = createDescriptorForBEqualsExpression();
   /*package*/ final ConceptDescriptor myConceptBExpression = createDescriptorForBExpression();
@@ -55,7 +56,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptBArithmeticBinaryExpression, myConceptBBinaryComparisonExpression, myConceptBBinaryExpression, myConceptBBooleanType, myConceptBDivExpression, myConceptBEmptyStatement, myConceptBEqualsExpression, myConceptBExpression, myConceptBExpressionStatement, myConceptBGreaterEqualsExpression, myConceptBGreaterThanExpression, myConceptBIfStatement, myConceptBIntegerType, myConceptBLowerEqualsExpression, myConceptBLowerToExpression, myConceptBMinusExpression, myConceptBMulExpression, myConceptBNotEqualsExpression, myConceptBNumberLiteral, myConceptBPlusExpression, myConceptBStatement, myConceptBStatementContainer, myConceptBStringLiteral, myConceptBStringType, myConceptBType, myConceptBVariable, myConceptBVariableReference, myConceptBWorkbook);
+    return Arrays.asList(myConceptBArithmeticBinaryExpression, myConceptBBinaryComparisonExpression, myConceptBBinaryExpression, myConceptBBooleanType, myConceptBDivExpression, myConceptBDoubleType, myConceptBEmptyStatement, myConceptBEqualsExpression, myConceptBExpression, myConceptBExpressionStatement, myConceptBGreaterEqualsExpression, myConceptBGreaterThanExpression, myConceptBIfStatement, myConceptBIntegerType, myConceptBLowerEqualsExpression, myConceptBLowerToExpression, myConceptBMinusExpression, myConceptBMulExpression, myConceptBNotEqualsExpression, myConceptBNumberLiteral, myConceptBPlusExpression, myConceptBStatement, myConceptBStatementContainer, myConceptBStringLiteral, myConceptBStringType, myConceptBType, myConceptBVariable, myConceptBVariableReference, myConceptBWorkbook);
   }
 
   @Override
@@ -72,6 +73,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptBBooleanType;
       case LanguageConceptSwitch.BDivExpression:
         return myConceptBDivExpression;
+      case LanguageConceptSwitch.BDoubleType:
+        return myConceptBDoubleType;
       case LanguageConceptSwitch.BEmptyStatement:
         return myConceptBEmptyStatement;
       case LanguageConceptSwitch.BEqualsExpression:
@@ -170,6 +173,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:c0c8b578-576c-46e7-b88f-7c740f9b98e3(basic.language.structure)/7181604156655224501");
     b.version(2);
     b.alias("/");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForBDoubleType() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("basic.language", "BDoubleType", 0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x1fc6816003d8c31bL);
+    b.class_(false, false, false);
+    b.super_("basic.language.structure.BType", 0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x63aa2eee42f488dfL);
+    b.origin("r:c0c8b578-576c-46e7-b88f-7c740f9b98e3(basic.language.structure)/2289659709945856795");
+    b.version(2);
+    b.alias("double");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForBEmptyStatement() {

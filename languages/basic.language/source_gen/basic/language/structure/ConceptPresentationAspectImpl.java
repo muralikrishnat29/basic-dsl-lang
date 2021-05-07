@@ -14,6 +14,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_BBinaryExpression;
   private ConceptPresentation props_BBooleanType;
   private ConceptPresentation props_BDivExpression;
+  private ConceptPresentation props_BDoubleType;
   private ConceptPresentation props_BEmptyStatement;
   private ConceptPresentation props_BEqualsExpression;
   private ConceptPresentation props_BExpression;
@@ -75,6 +76,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_BDivExpression = cpb.create();
         }
         return props_BDivExpression;
+      case LanguageConceptSwitch.BDoubleType:
+        if (props_BDoubleType == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("double");
+          props_BDoubleType = cpb.create();
+        }
+        return props_BDoubleType;
       case LanguageConceptSwitch.BEmptyStatement:
         if (props_BEmptyStatement == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

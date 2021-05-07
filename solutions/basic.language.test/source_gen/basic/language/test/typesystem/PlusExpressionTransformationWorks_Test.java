@@ -11,16 +11,16 @@ import jetbrains.mps.lang.test.runtime.BaseEditorTestBody;
 import jetbrains.mps.lang.test.runtime.TransformationTest;
 
 @MPSLaunch
-public class myEditorTestCase_Test extends BaseTransformationTest {
+public class PlusExpressionTransformationWorks_Test extends BaseTransformationTest {
   @ClassRule
-  public static final TestParametersCache ourParamCache = new TestParametersCache(myEditorTestCase_Test.class, "${project_home}", "r:4b07ccb3-afba-44b5-b0a9-25c537802a99(basic.language.test.typesystem@tests)", false);
+  public static final TestParametersCache ourParamCache = new TestParametersCache(PlusExpressionTransformationWorks_Test.class, "${project_home}", "r:4b07ccb3-afba-44b5-b0a9-25c537802a99(basic.language.test.typesystem@tests)", false);
 
-  public myEditorTestCase_Test() {
+  public PlusExpressionTransformationWorks_Test() {
     super(ourParamCache);
   }
 
   @Test
-  public void test_myEditorTestCase() throws Throwable {
+  public void test_PlusExpressionTransformationWorks() throws Throwable {
     new TestBody(this).testMethod();
   }
 
@@ -32,8 +32,8 @@ public class myEditorTestCase_Test extends BaseTransformationTest {
 
     @Override
     public void testMethodImpl() throws Exception {
-      initEditorComponent("959714475431192392", "959714475431192396");
-      typeString("var");
+      initEditorComponent("2289659709945660843", "2289659709945660876");
+      typeString("+12");
     }
   }
 }
