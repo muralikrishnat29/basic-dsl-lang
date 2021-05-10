@@ -18,17 +18,17 @@ public class typeof_Variable_InferenceRule extends AbstractInferenceRule_Runtime
   public typeof_Variable_InferenceRule() {
   }
   public void applyRule(final SNode variable, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
-    if (SLinkOperations.getTarget(variable, LINKS.type$fL2x) != null) {
+    if (SLinkOperations.getTarget(variable, LINKS.declaredType$fL2x) != null) {
       {
         SNode _nodeToCheck_1029348928467 = variable;
         EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:6dae767d-4ecf-4640-8c92-68f93fef7dff(basic.language.typesystem)", "7181604156656750322", 0, null);
-        typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:6dae767d-4ecf-4640-8c92-68f93fef7dff(basic.language.typesystem)", "7181604156656747537", true), (SNode) SLinkOperations.getTarget(variable, LINKS.type$fL2x), _info_12389875345);
+        typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:6dae767d-4ecf-4640-8c92-68f93fef7dff(basic.language.typesystem)", "7181604156656747537", true), (SNode) SLinkOperations.getTarget(variable, LINKS.declaredType$fL2x), _info_12389875345);
       }
       if (!(typeCheckingContext.isSingleTypeComputation())) {
         {
           SNode _nodeToCheck_1029348928467 = SLinkOperations.getTarget(variable, LINKS.value$c_cd);
           EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:6dae767d-4ecf-4640-8c92-68f93fef7dff(basic.language.typesystem)", "7181604156656753827", 0, null);
-          typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:6dae767d-4ecf-4640-8c92-68f93fef7dff(basic.language.typesystem)", "7181604156656753841", true), (SNode) SLinkOperations.getTarget(variable, LINKS.type$fL2x), true, true, _info_12389875345);
+          typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:6dae767d-4ecf-4640-8c92-68f93fef7dff(basic.language.typesystem)", "7181604156656753841", true), (SNode) SLinkOperations.getTarget(variable, LINKS.declaredType$fL2x), true, true, _info_12389875345);
         }
       }
     } else {
@@ -50,7 +50,7 @@ public class typeof_Variable_InferenceRule extends AbstractInferenceRule_Runtime
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink type$fL2x = MetaAdapterFactory.getContainmentLink(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x5d451e22fa43875dL, 0x63aa2eee42f2e220L, "type");
+    /*package*/ static final SContainmentLink declaredType$fL2x = MetaAdapterFactory.getContainmentLink(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x5d451e22fa43875dL, 0x63aa2eee42f2e220L, "declaredType");
     /*package*/ static final SContainmentLink value$c_cd = MetaAdapterFactory.getContainmentLink(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x5d451e22fa43875dL, 0x5d451e22fa441086L, "value");
   }
 

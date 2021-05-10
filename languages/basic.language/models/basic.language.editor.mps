@@ -166,7 +166,7 @@
             <property role="3F0ifm" value=":" />
           </node>
           <node concept="3F1sOY" id="6eEbIT2Z7OY" role="3EZMnx">
-            <ref role="1NtTu8" to="icqw:6eEbIT2WI8w" resolve="type" />
+            <ref role="1NtTu8" to="icqw:6eEbIT2WI8w" resolve="declaredType" />
           </node>
           <node concept="2iRfu4" id="6eEbIT2Z7OO" role="2iSdaV" />
         </node>

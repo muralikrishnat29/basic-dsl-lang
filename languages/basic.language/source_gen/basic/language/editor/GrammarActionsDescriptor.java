@@ -655,24 +655,24 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
             final SNode sourceNode = parentContext.getNode();
             return new Object() {
               public boolean renderingCondition(SNode node) {
-                return Sequence.fromIterable(AttributeOperations.getChildNodesAndAttributes(node, LINKS.type$fL2x)).isNotEmpty();
+                return Sequence.fromIterable(AttributeOperations.getChildNodesAndAttributes(node, LINKS.declaredType$fL2x)).isNotEmpty();
               }
             }.renderingCondition(sourceNode);
           }
         }));
         ListSequence.fromList(redirectedAfter).addElement(MultiTuple.<TransformationMenuContext,_FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>from(new Object() {
           public TransformationMenuContext redirect() {
-            // redirect to type 
+            // redirect to declaredType 
             final SNode sourceNode = _context.getNode();
 
             // Use the grammar rules for a deep search 
-            SNode parentNode = new Parser(_context.getModel()).isEndOf(sourceNode, _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM, CONCEPTS.BVariable$B1, LINKS.type$fL2x);
+            SNode parentNode = new Parser(_context.getModel()).isEndOf(sourceNode, _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM, CONCEPTS.BVariable$B1, LINKS.declaredType$fL2x);
             if (parentNode != null) {
               return _context.withNode(parentNode);
             }
 
             // There might be no grammar for some concepts. Try a single level check. 
-            if (SNodeOperations.isInstanceOf(sourceNode, CONCEPTS.BType$sW) && SNodeOperations.isInstanceOf(SNodeOperations.getParent(sourceNode), CONCEPTS.BVariable$B1) && Objects.equals(sourceNode.getContainmentLink(), LINKS.type$fL2x) && (_context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM) == false) {
+            if (SNodeOperations.isInstanceOf(sourceNode, CONCEPTS.BType$sW) && SNodeOperations.isInstanceOf(SNodeOperations.getParent(sourceNode), CONCEPTS.BVariable$B1) && Objects.equals(sourceNode.getContainmentLink(), LINKS.declaredType$fL2x) && (_context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM) == false) {
               TransformationMenuContext parentContext = _context.withNode(_context.getNode().getParent());
               return parentContext;
             }
@@ -684,7 +684,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
             final SNode sourceNode = parentContext.getNode();
             return new Object() {
               public boolean renderingCondition(SNode node) {
-                return Sequence.fromIterable(AttributeOperations.getChildNodesAndAttributes(node, LINKS.type$fL2x)).isNotEmpty();
+                return Sequence.fromIterable(AttributeOperations.getChildNodesAndAttributes(node, LINKS.declaredType$fL2x)).isNotEmpty();
               }
             }.renderingCondition(sourceNode);
           }
@@ -734,7 +734,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
               }.query();
               final boolean isApplicable = new Object() {
                 public boolean query() {
-                  return (SLinkOperations.getTarget(SNodeOperations.cast(_context.getNode(), CONCEPTS.BVariable$B1), LINKS.type$fL2x) == null);
+                  return (SLinkOperations.getTarget(SNodeOperations.cast(_context.getNode(), CONCEPTS.BVariable$B1), LINKS.declaredType$fL2x) == null);
                 }
               }.query();
 
@@ -746,7 +746,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
                   }
                   public SNode doSubstitute(@NotNull String pattern) {
                     final SNode sourceNode = _context.getNode();
-                    SNode result = SNodeFactoryOperations.setNewChild(SNodeOperations.cast(sourceNode, CONCEPTS.BVariable$B1), LINKS.type$fL2x, null);
+                    SNode result = SNodeFactoryOperations.setNewChild(SNodeOperations.cast(sourceNode, CONCEPTS.BVariable$B1), LINKS.declaredType$fL2x, null);
                     return result;
                   }
                   @Override
@@ -886,7 +886,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
     /*package*/ static final SContainmentLink expr$Jh7H = MetaAdapterFactory.getContainmentLink(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x63aa2eee42dcd84fL, 0x63aa2eee42dcd850L, "expr");
     /*package*/ static final SContainmentLink left$4cid = MetaAdapterFactory.getContainmentLink(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x5d451e22fa44bdb5L, 0x5d451e22fa44bdb6L, "left");
     /*package*/ static final SContainmentLink right$4cKf = MetaAdapterFactory.getContainmentLink(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x5d451e22fa44bdb5L, 0x5d451e22fa44bdb8L, "right");
-    /*package*/ static final SContainmentLink type$fL2x = MetaAdapterFactory.getContainmentLink(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x5d451e22fa43875dL, 0x63aa2eee42f2e220L, "type");
+    /*package*/ static final SContainmentLink declaredType$fL2x = MetaAdapterFactory.getContainmentLink(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x5d451e22fa43875dL, 0x63aa2eee42f2e220L, "declaredType");
     /*package*/ static final SContainmentLink value$c_cd = MetaAdapterFactory.getContainmentLink(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x5d451e22fa43875dL, 0x5d451e22fa441086L, "value");
   }
 }

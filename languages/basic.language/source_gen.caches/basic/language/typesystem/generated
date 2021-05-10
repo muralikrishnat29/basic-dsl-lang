@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-6mmnaih2gmvd64wlzypd9pmaqtaqvm2">
+<product version="3" modelHash="-9eu5zo7eqb6ygfjes5o2fqzkj63vwrj">
   <files names="TypesystemDescriptor.java:check_duplicateVariableNames_NonTypesystemRule.java:typeof_BVariableReference_InferenceRule.java:typeof_BinaryExpression_InferenceRule.java:typeof_NumberLiteral_InferenceRule.java:typeof_StringLiteral_InferenceRule.java:typeof_Variable_InferenceRule.java" />
 </product>
 

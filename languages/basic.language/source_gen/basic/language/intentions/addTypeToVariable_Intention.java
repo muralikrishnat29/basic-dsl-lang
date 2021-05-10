@@ -36,7 +36,7 @@ public final class addTypeToVariable_Intention extends AbstractIntentionDescript
     return true;
   }
   private boolean isApplicableToNode(final SNode node, final EditorContext editorContext) {
-    return (SLinkOperations.getTarget(node, LINKS.type$fL2x) == null);
+    return (SLinkOperations.getTarget(node, LINKS.declaredType$fL2x) == null);
   }
   @Override
   public boolean isSurroundWith() {
@@ -57,7 +57,7 @@ public final class addTypeToVariable_Intention extends AbstractIntentionDescript
     }
     @Override
     public void execute(final SNode node, final EditorContext editorContext) {
-      SLinkOperations.setNewChild(node, LINKS.type$fL2x, null);
+      SLinkOperations.setNewChild(node, LINKS.declaredType$fL2x, null);
     }
     @Override
     public IntentionDescriptor getDescriptor() {
@@ -66,7 +66,7 @@ public final class addTypeToVariable_Intention extends AbstractIntentionDescript
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink type$fL2x = MetaAdapterFactory.getContainmentLink(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x5d451e22fa43875dL, 0x63aa2eee42f2e220L, "type");
+    /*package*/ static final SContainmentLink declaredType$fL2x = MetaAdapterFactory.getContainmentLink(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x5d451e22fa43875dL, 0x63aa2eee42f2e220L, "declaredType");
   }
 
   private static final class PROPS {

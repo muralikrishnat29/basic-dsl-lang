@@ -7895,7 +7895,7 @@
                         <node concept="liA8E" id="HP" role="2OqNvi">
                           <ref role="37wK5l" to="bzg8:~ConceptDescriptorBuilder2.aggregate(java.lang.String,long)" resolve="aggregate" />
                           <node concept="Xl_RD" id="HQ" role="37wK5m">
-                            <property role="Xl_RC" value="type" />
+                            <property role="Xl_RC" value="declaredType" />
                           </node>
                           <node concept="1adDum" id="HR" role="37wK5m">
                             <property role="1adDun" value="0x63aa2eee42f2e220L" />

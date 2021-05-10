@@ -72,7 +72,7 @@ public final class addSpecificType_Intention extends AbstractIntentionDescriptor
     @Override
     public void execute(final SNode node, final EditorContext editorContext) {
       SNode newInstance = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(myParameter));
-      SLinkOperations.setTarget(node, LINKS.type$fL2x, newInstance);
+      SLinkOperations.setTarget(node, LINKS.declaredType$fL2x, newInstance);
     }
     @Override
     public IntentionDescriptor getDescriptor() {
@@ -92,6 +92,6 @@ public final class addSpecificType_Intention extends AbstractIntentionDescriptor
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink type$fL2x = MetaAdapterFactory.getContainmentLink(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x5d451e22fa43875dL, 0x63aa2eee42f2e220L, "type");
+    /*package*/ static final SContainmentLink declaredType$fL2x = MetaAdapterFactory.getContainmentLink(0xdf20d2ac476c4ef8L, 0x8b3f4802becda85fL, 0x5d451e22fa43875dL, 0x63aa2eee42f2e220L, "declaredType");
   }
 }
