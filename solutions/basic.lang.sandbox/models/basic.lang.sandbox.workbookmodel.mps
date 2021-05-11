@@ -43,6 +43,9 @@
       <concept id="959714475429900401" name="test.lang.structure.BAssertStatement" flags="ng" index="4Bita">
         <child id="959714475429900402" name="expr" index="4Bit9" />
       </concept>
+      <concept id="2289659709945869329" name="test.lang.structure.BExecuteTests" flags="ng" index="s7BlL">
+        <reference id="2289659709945869330" name="testSuite" index="s7BlM" />
+      </concept>
       <concept id="703809425672192116" name="test.lang.structure.BTestSuite" flags="ng" index="2v1MU5">
         <child id="703809425672192122" name="tests" index="2v1MUb" />
       </concept>
@@ -104,6 +107,9 @@
       <node concept="4BaPz" id="2H7d4s8uJwF" role="2B0gU$">
         <ref role="4BaPy" node="5dEsyg6QgI2" resolve="a" />
       </node>
+    </node>
+    <node concept="s7BlL" id="2H7d4s8xnHM" role="2B1D_0">
+      <ref role="s7BlM" node="Ph_NG9NiG6" resolve="myTests" />
     </node>
   </node>
   <node concept="2v1MU5" id="Ph_NG9NiG6">

@@ -35,6 +35,7 @@
       </concept>
       <concept id="1070534058343" name="jetbrains.mps.baseLanguage.structure.NullLiteral" flags="nn" index="10Nm6u" />
       <concept id="1070534370425" name="jetbrains.mps.baseLanguage.structure.IntegerType" flags="in" index="10Oyi0" />
+      <concept id="1070534644030" name="jetbrains.mps.baseLanguage.structure.BooleanType" flags="in" index="10P_77" />
       <concept id="1068390468198" name="jetbrains.mps.baseLanguage.structure.ClassConcept" flags="ig" index="312cEu" />
       <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
         <child id="1068431790190" name="initializer" index="33vP2m" />
@@ -308,6 +309,12 @@
       <ref role="30HIoZ" to="icqw:6eEbIT2X8zG" resolve="BStringType" />
       <node concept="gft3U" id="2H7d4s8sksB" role="1lVwrX">
         <node concept="17QB3L" id="2H7d4s8skt8" role="gfFT$" />
+      </node>
+    </node>
+    <node concept="3aamgX" id="2H7d4s8xEEd" role="3acgRq">
+      <ref role="30HIoZ" to="icqw:6eEbIT2X8zH" resolve="BBooleanType" />
+      <node concept="gft3U" id="2H7d4s8xEFq" role="1lVwrX">
+        <node concept="10P_77" id="2H7d4s8xEFw" role="gfFT$" />
       </node>
     </node>
     <node concept="3aamgX" id="2H7d4s8u7UN" role="3acgRq">

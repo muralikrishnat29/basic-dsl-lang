@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <root nodeRef="r:eea42479-28cf-40ff-b58c-8c1d12fc11c6(test.lang.generator01.generator.util)/3118518746667672137">
+    <file name="TestCaseNameHelper.java">
+      <node id="3118518746667672339" at="11,59,12,86" concept="0" />
+      <node id="3118518746667672137" at="16,0,17,0" concept="1" trace="name$MnvL" />
+      <node id="3118518746667672226" at="11,0,14,0" concept="2" trace="getNameForTestCase#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <scope id="3118518746667672229" at="11,59,12,86" />
+      <scope id="3118518746667672226" at="11,0,14,0">
+        <var name="testcase" id="3118518746667672253" />
+      </scope>
+      <unit id="3118518746667672137" at="15,0,18,0" name="test.lang.generator01.generator.util.TestCaseNameHelper$PROPS" />
+      <unit id="3118518746667672137" at="10,0,19,0" name="test.lang.generator01.generator.util.TestCaseNameHelper" />
+    </file>
+  </root>
+</debug-info>
+
